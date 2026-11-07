@@ -1,0 +1,10 @@
+{
+  "name": "anything",
+  "version": "0.1.0",
+  "description": "Opinionated, lightweight skills for setup, interviews, planning, coordination, review, Git, and documentation across agent environments.",
+  "author": {
+    "name": "Ron Edgecomb"
+  },
+  "license": "Apache-2.0",
+  "repository": "https://github.com/ronedgecomb/anything"
+}

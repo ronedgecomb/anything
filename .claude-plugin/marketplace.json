@@ -1,0 +1,14 @@
+{
+  "name": "anything-marketplace",
+  "description": "Opinionated, lightweight skills for setup, interviews, planning, coordination, review, Git, and documentation across agent environments.",
+  "owner": {
+    "name": "Ron Edgecomb"
+  },
+  "plugins": [
+    {
+      "name": "anything",
+      "description": "Opinionated, lightweight skills for setup, interviews, planning, coordination, review, Git, and documentation across agent environments.",
+      "source": "./"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "name": "anything",
+  "version": "0.1.0",
+  "description": "Opinionated, lightweight skills for setup, interviews, planning, coordination, review, Git, and documentation across agent environments.",
+  "license": "Apache-2.0",
+  "keywords": [
+    "pi-package"
+  ],
+  "pi": {
+    "skills": [
+      "./skills"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ronedgecomb/anything.git"
+  },
+  "homepage": "https://github.com/ronedgecomb/anything#readme"
+}

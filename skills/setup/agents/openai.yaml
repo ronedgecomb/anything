@@ -1,0 +1,7 @@
+interface:
+  display_name: "Setup"
+  short_description: "Initialize or update project workflow preferences"
+  default_prompt: "Use $setup to initialize or update this project's workflow preferences."
+
+policy:
+  allow_implicit_invocation: false
