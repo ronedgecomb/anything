@@ -44,10 +44,12 @@ Separate confirmed defects, unresolved questions, and preferences. Verify a find
 | --- | --- |
 | Fix | Correct a substantiated issue within the requested scope and authorization. |
 | Record a trade-off | Explain the consequence of an intentional choice in an appropriate existing record. |
-| Follow up | Put necessary out-of-scope work where the project tracks it, or report it to the user. |
+| Follow up | Defer out-of-scope work with a brief finding, evidence or location, and next step. Ask before adding it to an existing tracker unless already authorized; otherwise report it in the conversation. |
 | Reject | Give a concise evidence-based reason. |
 
 Do not silently change an explicitly settled product decision or locked wording to satisfy a reviewer. Explain the conflict when it needs a new decision.
+
+An unrelated finding does not authorize further investigation, fixes, or delegation. Ask before expanding the task, or report it for later without creating a tracking system.
 
 After fixes, verify the affected result. Repeat a wider check when the project requires it or the change justifies it. A second specialist review is useful when a significant risk remains, not a mandatory phase for every correction.
 

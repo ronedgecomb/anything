@@ -49,7 +49,11 @@ Exercise these cases when changing a skill or claiming support for another host:
 | A small text or presentation change | A focused edit with applicable existing checks or direct inspection; add automated coverage when behavior or project requirements justify it. |
 | A one-line behavior fix with a regression gap | A clear, complete fix and a focused regression test when needed; patch size alone does not determine verification. |
 | Tests tied to incidental implementation details | Prefer stable checks of required behavior; retain implementation-specific assertions when those details are part of the required contract. |
-| Requested work complete and applicable checks pass | Finish; broaden work when new evidence or project requirements justify it. |
+| Requested work complete and applicable checks pass | Finish and report deferred findings; do not extend the task for unrelated improvements. |
+| An unrelated defect or cleanup opportunity appears during work or review | Ask before further investigation, fixes, or delegation, or defer it with available evidence and a next step. |
+| A newly discovered issue blocks the requested outcome | Resolve it within existing authorization; ask if resolving it exceeds that scope. |
+| An existing tracker or `TODO.md` could hold a follow-up | Ask before adding it unless the user or project instructions already authorize recording it there. Its existence alone is not permission. |
+| No established follow-up destination | Report the issue, evidence or location, and next step in the conversation for a future session; do not create a tracking system or start the work. |
 | Delegation available but prohibited | Direct execution; no native workers or subprocess workaround. |
 | Only permitted subprocess workers available | Check tooling and lifecycle controls, pass a bounded brief, collect actual results. |
 | No workers, Git, or writable files | Work sequentially and return the requested content; do not fabricate commits or saved artifacts. |

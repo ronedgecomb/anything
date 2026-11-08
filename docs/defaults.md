@@ -19,7 +19,8 @@ A skill, project file, or installed tool cannot grant permission that the curren
 | Implementation | Prefer the smallest clear, complete change that follows project conventions. Add complexity when it solves a concrete problem. |
 | Review | Prefer a separate context when useful and available. Label self-review and unverified claims honestly. |
 | Verification | Use existing checks where they suffice. Add or update tests for meaningful failures or required behavior. Report actual checks and limits. |
-| Completion | Finish when the requested outcome is complete and applicable checks pass. Broaden work when new evidence or project requirements justify it. |
+| Completion | Finish when the requested outcome is complete and applicable checks pass. Continue necessary work within authorization; ask before pursuing unrelated findings, or defer them. |
+| Follow-ups | Report the issue, evidence or location, and next step. Ask before adding it to an existing tracker or `TODO.md` unless already authorized; otherwise use the conversation without creating a tracker. |
 | Authorization | Continue within existing authorization. Ask before crossing its scope or a required approval boundary. |
 | Git | Prefer Conventional Commits when the project has no established message convention. Follow its branch and integration rules. |
 | Structure | Keep the existing project shape unless changing it solves a concrete problem. |

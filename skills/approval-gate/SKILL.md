@@ -18,13 +18,14 @@ Identify the target, effect, relevant account or environment, cost, and reversib
 - Ask when permission is missing, materially ambiguous, or required by an applicable rule.
 - A discussion of possibilities, a request for review, or a plan listing an action does not by itself authorize execution. An explicit instruction to execute it may already do so.
 - Treat changes to the target, effect, cost, or scope as a reason to reassess authorization.
+- Discovering an unrelated issue does not authorize investigating, fixing, or delegating it. Ask before expanding the task, or defer it with a brief finding and next step. Ask before recording it in an existing tracker or `TODO.md` unless that recording is already authorized; otherwise report it in the conversation without creating a tracker.
 - Do not use a different tool, worker, or subprocess to bypass a restriction.
 
 Evaluate consequences rather than location alone. A remote read can be routine; a local deletion can destroy important work. Pushing a branch, sending a message, merging, publishing, and deleting resources each need authorization appropriate to their actual effect; none is automatically included in an unrelated action.
 
 ## Prepare a concrete action
 
-Finish the useful preparatory work first. Inspect current state and use non-mutating checks when available and permitted. Confirm important preconditions and whether the effect can be reversed.
+Finish the useful preparatory work within authorized scope first. Inspect current state and use non-mutating checks when available and permitted. Confirm important preconditions and whether the effect can be reversed. Preparation does not authorize pursuing unrelated work before asking to expand scope.
 
 When approval is needed, make it reviewable:
 
