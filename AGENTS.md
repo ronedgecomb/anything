@@ -24,6 +24,7 @@ Keep useful defaults available without setup. Setup and cleanup are explicitly u
 - Keep names and versions consistent in `plugin.json`, `.claude-plugin/plugin.json`, and `package.json`. Keep both marketplace catalogs aligned with the plugin identity.
 - Bump the shared version whenever skill instructions, bundled supporting files, or plugin behavior or packaging change. Related edits in one release share one bump; repository-only documentation changes do not require one. Use a patch for corrections, a minor for new skills or compatible capabilities, and a major for breaking changes. See [release versioning](docs/installation.md#release-versioning) for the update and cache behavior.
 - Use `Apache-2.0` licensing metadata. Keep each skill's `LICENSE.txt` and `NOTICE` identical to the root `LICENSE` and `NOTICE` so individual installations retain the terms and attribution.
+- `assets/` holds the wordmark and plugin icon, drawn as outlines in ink `#111111` and paper `#eeeeee`, so no font is required. The README and manifests reference these files; skills must not depend on them. See [logos and icons](docs/compatibility.md#logos-and-icons) for each host's field.
 - Use `README.md` for the entry point and `docs/` for substantial installation, defaults, and compatibility detail. Update the relevant documentation when behavior changes. Do not add a repository changelog.
 - `CLAUDE.md` imports this file; maintain project instructions here rather than duplicating them.
 

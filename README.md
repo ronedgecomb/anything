@@ -1,4 +1,10 @@
-# anything
+<h1>
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/wordmark-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="assets/wordmark.svg">
+    <img alt="anything" src="assets/wordmark.svg" width="280">
+  </picture>
+</h1>
 
 Opinionated, lightweight agent skills for pretty much anything.
 
@@ -83,6 +89,7 @@ Choose the skills and agents you want. See [installation](docs/installation.md) 
 - `plugin.json` and `.claude-plugin/plugin.json`: plugin manifests.
 - `.agents/plugins/marketplace.json` and `.claude-plugin/marketplace.json`: installation catalogs.
 - `package.json`: Pi package metadata.
+- `assets/`: wordmark and plugin icon.
 
 ## Contributing
 

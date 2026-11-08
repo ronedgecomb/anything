@@ -39,6 +39,22 @@ Setup uses `AGENTS.md` as the canonical project artifact. Whether it is automati
 
 For example, current [Claude Code instructions](https://code.claude.com/docs/en/memory#agentsmd) describe conditional AGENTS.md loading when other project instruction files are present. Use the host's documented configuration or an explicit import when necessary, preserving existing instructions.
 
+## Logos and icons
+
+Each host reads its own field, so the README and manifests point at different files in `assets/`:
+
+| Surface | Field | File | Use |
+| --- | --- | --- | --- |
+| GitHub | `<picture>` in `README.md` | `wordmark.svg`, `wordmark-dark.svg` | Repository page, chosen by color scheme. |
+| Claude Code | `icon` in `.claude-plugin/plugin.json` | `icon.png` | Listing in Anthropic's directory. Claude Code does not read it. |
+| Codex | `composerIcon` and `logo` in `plugin.json`, under `extensions.com.openai.interface` | `icon.svg` | Composer and plugin listing. |
+| Pi | None | None | `pi.image` adds previews in the npm package gallery; this package installs from Git. |
+| Individual skills | None | None | Skills stay self-contained and do not use these files. |
+
+Root `plugin.json` follows the Agent Plugins schema, which rejects unknown top-level fields, so host-specific fields belong under `extensions`. Hosts that copy the whole plugin also copy `assets/`, so keep these files small.
+
+References: [Claude Code directory fields](https://code.claude.com/docs/en/plugins/manifest-reference#directory-listing-fields), [Codex plugin icons](https://developers.openai.com/plugins/deploy/submission), [Pi packages](https://github.com/earendil-works/pi/blob/main/packages/coding-agent/docs/packages.md).
+
 ## Behavioral checks
 
 Exercise these cases when changing a skill or claiming support for another host:
