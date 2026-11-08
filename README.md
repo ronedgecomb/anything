@@ -1,6 +1,6 @@
 # anything
 
-Opinionated, lightweight skills for working with agents across projects and environments. Use them for software, research, writing, planning, and other tasks.
+Opinionated, lightweight agent skills for pretty much anything.
 
 Start with the skills you need. Setup is optional: useful defaults are included in each skill, and setup records your project's preferences in `AGENTS.md`.
 
