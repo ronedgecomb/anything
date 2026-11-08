@@ -16,8 +16,10 @@ A skill, project file, or installed tool cannot grant permission that the curren
 | Interviews | Use short rounds and adapt their depth to the topic. Recommendations should explain their trade-offs. |
 | Planning | Use the smallest plan that makes the task clear. Persist one when continuity or complexity benefits. |
 | Delegation | Use it only when useful, available, and permitted. Direct sequential work is a complete execution mode. |
+| Implementation | Prefer the smallest clear, complete change that follows project conventions. Add complexity when it solves a concrete problem. |
 | Review | Prefer a separate context when useful and available. Label self-review and unverified claims honestly. |
-| Verification | Check the actual output at a scope appropriate to the change. Report what was and was not checked. |
+| Verification | Use existing checks where they suffice. Add or update tests for meaningful failures or required behavior. Report actual checks and limits. |
+| Completion | Finish when the requested outcome is complete and applicable checks pass. Broaden work when new evidence or project requirements justify it. |
 | Authorization | Continue within existing authorization. Ask before crossing its scope or a required approval boundary. |
 | Git | Prefer Conventional Commits when the project has no established message convention. Follow its branch and integration rules. |
 | Structure | Keep the existing project shape unless changing it solves a concrete problem. |
