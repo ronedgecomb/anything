@@ -26,7 +26,7 @@ Use [assets/plan-template.md](assets/plan-template.md) when helpful. Keep only a
 - **Decisions:** confirmed answers and their consequences, separated from assumptions and open questions.
 - **Progress:** completed work, current state, the next step, and actual blockers.
 - **Verification:** checks or review methods appropriate to the artifact and their observed results.
-- **Follow-ups:** work that remains outside this task, placed in the project's normal tracker when appropriate.
+- **Follow-ups:** work outside this task, with a brief finding, evidence or location, and next step. Ask before adding it to an existing tracker unless already authorized; otherwise report it in the conversation without creating a tracker. Listing it does not authorize investigating, implementing, or delegating it.
 
 Add domain-specific sections only when they help, such as a data migration, publication wording, experiment design, or release steps. An interview skill can help clarify decisions but is not a prerequisite.
 

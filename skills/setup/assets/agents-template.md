@@ -12,6 +12,7 @@
 - Delegate only when useful, available, and permitted. Otherwise work directly. Recheck capabilities each session.
 - Prefer a separate context for review when useful; label self-review honestly when no separate context is available.
 - Continue within authorization already given. Clarify new scope and respect required approval boundaries.
+- Defer unrelated findings; ask before investigating, fixing, or delegating them. Report the issue, evidence or location, and next step. Ask before recording it in an existing tracker or `TODO.md` unless already authorized; otherwise report it in the conversation without creating a tracker.
 
 ## Project conventions
 

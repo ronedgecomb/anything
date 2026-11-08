@@ -12,6 +12,7 @@ Start with the skills you need. Setup is optional: useful defaults are included 
 - Delegate only when it is useful, available, and permitted. Work directly when it is not.
 - Keep decisions and findings grounded in evidence. Distinguish independent review from self-review.
 - Respect authorization already given within its scope. Ask when an action needs permission that is missing or unclear.
+- Defer unrelated findings. Ask before pursuing them or adding them to an existing tracker unless already authorized; otherwise report them for later.
 - Prefer Conventional Commits when Git is used and the project has no other convention.
 
 The skills are instructions loaded when relevant or explicitly invoked; installing the plugin does not replace the host's instructions or grant additional permissions.
