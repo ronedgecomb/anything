@@ -22,6 +22,7 @@ Keep useful defaults available without setup. Setup and cleanup are explicitly u
 - Supporting paths are relative to the skill directory.
 - Keep setup and cleanup's manual-invocation frontmatter and their `agents/openai.yaml` policies intact.
 - Keep names and versions consistent in `plugin.json`, `.claude-plugin/plugin.json`, and `package.json`. Keep both marketplace catalogs aligned with the plugin identity.
+- Bump the shared version whenever skill instructions, bundled supporting files, or plugin behavior or packaging change. Related edits in one release share one bump; repository-only documentation changes do not require one. Use a patch for corrections, a minor for new skills or compatible capabilities, and a major for breaking changes. See [release versioning](docs/installation.md#release-versioning) for the update and cache behavior.
 - Use `Apache-2.0` licensing metadata. Keep each skill's `LICENSE.txt` and `NOTICE` identical to the root `LICENSE` and `NOTICE` so individual installations retain the terms and attribution.
 - Use `README.md` for the entry point and `docs/` for substantial installation, defaults, and compatibility detail. Update the relevant documentation when behavior changes. Do not add a repository changelog.
 - `CLAUDE.md` imports this file; maintain project instructions here rather than duplicating them.

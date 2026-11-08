@@ -88,6 +88,14 @@ npx skills add ./
 
 Installers may use cached or copied content. Reload or reinstall as required by the host when testing changes.
 
+## Release versioning
+
+Keep the version in `plugin.json`, `.claude-plugin/plugin.json`, and `package.json` identical. Bump it whenever skill instructions, bundled supporting files, or plugin behavior or packaging change. Use a patch for corrections, a minor for new skills or compatible capabilities, and a major for breaking changes. Related edits shipped together share one bump; repository-only documentation changes do not require one.
+
+Claude Code caches marketplace-installed plugin content by version. Changing the repository while keeping the same manifest version can leave users on older files even after an update. A new release version makes the changed content eligible for installation; users still need to update and reload it. See [Claude Code versioning](https://code.claude.com/docs/en/plugins/manifest-reference#version).
+
+If changes have already been merged without a bump, release the current content under one new version. That release includes the accumulated changes; earlier commits do not need rewriting or separate retroactive version bumps.
+
 ## Configure a project
 
 Ordinary tasks can use the skills immediately. Explicitly invoke setup only when you want to initialize or update project instructions.
