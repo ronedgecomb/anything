@@ -4,7 +4,7 @@
 
 Anything is a lightweight collection of opinionated, independently useful agent skills for software, research, writing, planning, and other work.
 
-Keep useful defaults available without setup. Setup is explicitly user-invoked and records durable project preferences in `AGENTS.md`; it must preserve existing instructions and avoid baking in the current harness or environment.
+Keep useful defaults available without setup. Setup and cleanup are explicitly user-invoked. Setup records durable project preferences in `AGENTS.md`; it must preserve existing instructions and avoid baking in the current harness or environment.
 
 ## Authoring
 
@@ -20,10 +20,10 @@ Keep useful defaults available without setup. Setup is explicitly user-invoked a
 
 - Each skill lives in `skills/<name>/SKILL.md`, with a matching lowercase kebab-case frontmatter name and a clear description of when it applies.
 - Supporting paths are relative to the skill directory.
-- Keep setup's manual-invocation frontmatter and `skills/setup/agents/openai.yaml` policy intact.
+- Keep setup and cleanup's manual-invocation frontmatter and their `agents/openai.yaml` policies intact.
 - Keep names and versions consistent in `plugin.json`, `.claude-plugin/plugin.json`, and `package.json`. Keep both marketplace catalogs aligned with the plugin identity.
 - Use `Apache-2.0` licensing metadata. Keep each skill's `LICENSE.txt` and `NOTICE` identical to the root `LICENSE` and `NOTICE` so individual installations retain the terms and attribution.
-- Use `README.md` for the entry point and `docs/` for substantial installation, defaults, and compatibility detail. Update the relevant documentation when behavior changes.
+- Use `README.md` for the entry point and `docs/` for substantial installation, defaults, and compatibility detail. Update the relevant documentation when behavior changes. Do not add a repository changelog.
 - `CLAUDE.md` imports this file; maintain project instructions here rather than duplicating them.
 
 ## Verification

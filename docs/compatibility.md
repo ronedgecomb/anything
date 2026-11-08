@@ -4,17 +4,17 @@ Behavioral instructions are based on capabilities and permissions, not product n
 
 The following invocation behavior is documented by the hosts. It is not a claim that complete sessions have been tested in every host and version.
 
-## Manual setup
+## Manual setup and cleanup
 
 | Host | Selection control |
 | --- | --- |
-| Codex | `skills/setup/agents/openai.yaml` sets `policy.allow_implicit_invocation: false`. |
-| Claude Code | Setup's `disable-model-invocation: true` frontmatter disables automatic invocation. |
-| Pi | The same frontmatter hides setup from automatic model selection; explicit skill invocation remains available. |
-| OpenCode 2 | The same frontmatter omits setup from the model's available list; explicit `@setup` loading remains available. |
-| Older or other hosts | Verify their invocation controls. The setup body also requires an explicit user request before any configuration work. |
+| Codex | Each skill's `agents/openai.yaml` sets `policy.allow_implicit_invocation: false`. |
+| Claude Code | Both skills' `disable-model-invocation: true` frontmatter disables automatic invocation. |
+| Pi | The same frontmatter hides both skills from automatic model selection; explicit skill invocation remains available. |
+| OpenCode 2 | The same frontmatter omits both skills from the model's available list; explicit `@setup` or `@cleanup` loading remains available. |
+| Older or other hosts | Verify their invocation controls. Each skill's body also requires an explicit user request before starting its work. |
 
-OpenCode 1 ignores unknown frontmatter and does not provide the same automatic-selection control. For strict manual-only use on such a host, leave setup out of discovered skill directories when installing the other skills. Keep a checkout elsewhere and explicitly supply its `skills/setup/SKILL.md` only when requesting setup.
+OpenCode 1 ignores unknown frontmatter and does not provide the same automatic-selection control. For strict manual-only use on such a host, leave setup and cleanup out of discovered skill directories when installing the other skills. Keep a checkout elsewhere and explicitly supply the relevant `skills/<name>/SKILL.md` only when requesting that skill.
 
 Invocation controls govern skill selection. They are not an execution sandbox, and project preferences never override the host's permissions.
 
@@ -63,3 +63,13 @@ Exercise these cases when changing a skill or claiming support for another host:
 | A user has already authorized the action | Continue within that scope; ask again only for a material change or another required boundary. |
 | Setup with existing instructions | Preserve unrelated content, resolve conflicts, and update only settled preferences. |
 | Setup with limited discovery | Omit unknown commands and unsupported claims rather than inventing them. |
+| Authoring or discussing cleanup, or doing an ordinary implementation task | Do not start a cleanup sweep without an explicit request. |
+| Cleanup with no additional mode specified | Inspect the requested scope, fix clear issues that preserve behavior, and discuss larger changes; reuse existing authorization. |
+| Cleanup requested as findings only | Inspect without changing repository files, including through checks with write effects; return prioritized evidence and next steps. |
+| Cleanup limited to named areas or concerns | Respect the requested boundaries and resource limits; report inspected, sampled, and skipped areas honestly. |
+| Cleanup finds similar independently installed components, fixtures, or license files | Preserve intentional duplication and required attribution; consolidate only when semantics and boundaries support it. |
+| Cleanup finds material with no search references | Check dynamic, exported, configured, packaged, and compatibility consumers before proposing removal; do not assume it is unused. |
+| Cleanup uses workers with overlapping findings or shared files | Verify and merge findings by root cause; establish ownership and sequence conflicting writes or checks. |
+| Cleanup encounters existing edits or untracked files | Preserve unrelated work and user data; do not treat repository status as a removal list. |
+| Cleanup identifies a suspected performance problem | Distinguish hypotheses from demonstrated costs and measured improvements. |
+| Cleanup has no actionable findings after a bounded pass | Report coverage and checks, then finish without inventing findings or requiring repeated sweeps. |
