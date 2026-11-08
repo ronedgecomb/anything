@@ -20,6 +20,7 @@ A skill, project file, or installed tool cannot grant permission that the curren
 | Review | Prefer a separate context when useful and available. Label self-review and unverified claims honestly. |
 | Verification | Use existing checks where they suffice. Add or update tests for meaningful failures or required behavior. Report actual checks and limits. |
 | Completion | Finish when the requested outcome is complete and applicable checks pass. Continue necessary work within authorization; ask before pursuing unrelated findings, or defer them. |
+| Cleanup sweeps | Explicit invocation only. Fix clear issues that preserve behavior within the requested scope; discuss larger changes. Honor findings-only requests. |
 | Follow-ups | Report the issue, evidence or location, and next step. Ask before adding it to an existing tracker or `TODO.md` unless already authorized; otherwise use the conversation without creating a tracker. |
 | Authorization | Continue within existing authorization. Ask before crossing its scope or a required approval boundary. |
 | Git | Prefer Conventional Commits when the project has no established message convention. Follow its branch and integration rules. |
@@ -39,5 +40,7 @@ Do not persist today's agent count, installed tool list, authentication state, a
 ## Composition
 
 Use another skill when it is installed and helps. Otherwise apply the current skill directly. Resolve supporting files relative to the directory containing that skill's `SKILL.md`.
+
+Cleanup provides an explicitly requested repository sweep using these defaults. Its relevant areas and findings are within that requested scope; ordinary tasks still defer unrelated cleanup. See [repository cleanup](cleanup.md) for coverage and optional skill composition.
 
 Some work ends with a conversation or a draft; other work ends with a tested change or a published artifact. Carry out only the stages needed for the requested outcome.

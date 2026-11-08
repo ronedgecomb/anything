@@ -1,0 +1,7 @@
+interface:
+  display_name: "Cleanup"
+  short_description: "Sweep a repository for focused maintainability improvements"
+  default_prompt: "Use $cleanup to inspect this repository and apply focused improvements that preserve behavior."
+
+policy:
+  allow_implicit_invocation: false

@@ -22,6 +22,7 @@ The skills are instructions loaded when relevant or explicitly invoked; installi
 | Skill | Use it to |
 | --- | --- |
 | [setup](skills/setup/SKILL.md) | Explicitly initialize or update project preferences in `AGENTS.md`. Manual invocation only. |
+| [cleanup](skills/cleanup/SKILL.md) | Explicitly sweep a repository for maintainability improvements, fix clear issues, and discuss larger changes. Manual invocation only. |
 | [interview](skills/interview/SKILL.md) | Clarify a topic, goal, decision, or set of requirements through an adaptive conversation. |
 | [orchestrate](skills/orchestrate/SKILL.md) | Coordinate work at the right scale, with optional delegation. |
 | [task-plan](skills/task-plan/SKILL.md) | Keep a concise plan and handoff record when the task benefits from one. |
@@ -37,6 +38,12 @@ Each skill works on its own. References to other skills are optional helpers; th
 Explicitly invoke `setup` when you want to configure a project. It reads what is already there, asks only about unresolved choices, and creates or updates a small section of the root `AGENTS.md`. Existing instructions are preserved. Without file access it returns a draft instead.
 
 Project preferences persist; tool availability and permissions are checked in the current session. Ordinary tasks do not trigger setup.
+
+## Cleanup
+
+Explicitly invoke `cleanup` for a full or targeted repository sweep covering duplication, complexity, structure, tests, documentation, and evidenced performance costs. It fixes clear issues that preserve behavior and discusses larger changes. Request findings only when you want an audit without edits.
+
+The sweep can use subagents when useful, available, and permitted, or work directly. See [repository cleanup](docs/cleanup.md) for scope, examples, and how it composes with the other skills.
 
 ## Installation
 
