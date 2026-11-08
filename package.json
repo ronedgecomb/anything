@@ -1,7 +1,7 @@
 {
   "name": "anything",
   "version": "0.1.0",
-  "description": "Opinionated, lightweight skills for setup, interviews, planning, coordination, review, Git, and documentation across agent environments.",
+  "description": "Opinionated, lightweight agent skills for pretty much anything.",
   "license": "Apache-2.0",
   "keywords": [
     "pi-package"
