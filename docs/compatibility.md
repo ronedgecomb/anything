@@ -61,6 +61,8 @@ Exercise these cases when changing a skill or claiming support for another host:
 | An interview without a question tool | Adaptive questions in normal conversation. |
 | Only one skill installed | Complete its task without requiring sibling skills or root repository resources. |
 | A user has already authorized the action | Continue within that scope; ask again only for a material change or another required boundary. |
+| Skill content or plugin behavior changes for a release | Bump the version consistently across all three manifests; related changes in one release share a bump. |
+| A new skill is missing after an installed Claude plugin is updated | Check the installed components, manifest version, project scope, and enabled state. Refresh the marketplace, update the plugin, and reload or restart the session; do not assume the checkout and installed cache match. |
 | Setup with existing instructions | Preserve unrelated content, resolve conflicts, and update only settled preferences. |
 | Setup with limited discovery | Omit unknown commands and unsupported claims rather than inventing them. |
 | Authoring or discussing cleanup, or doing an ordinary implementation task | Do not start a cleanup sweep without an explicit request. |
