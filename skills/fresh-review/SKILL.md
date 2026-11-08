@@ -38,6 +38,8 @@ Each finding should include:
 
 Separate confirmed defects, unresolved questions, and preferences. Verify a finding before accepting it; agreement between reviewers is not proof. Identify unnecessary complexity or brittle verification where it has a practical cost, and avoid inventing issues to fill a report.
 
+Check for documentation, comments, and tests that merely memorialize a previous implementation. Retain historical references or absence checks when they serve an established current requirement; preserve meaningful regression coverage and necessary migration guidance.
+
 ## Triage and follow through
 
 | Decision | Action |

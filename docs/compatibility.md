@@ -49,6 +49,12 @@ Exercise these cases when changing a skill or claiming support for another host:
 | A small text or presentation change | A focused edit with applicable existing checks or direct inspection; add automated coverage when behavior or project requirements justify it. |
 | A one-line behavior fix with a regression gap | A clear, complete fix and a focused regression test when needed; patch size alone does not determine verification. |
 | Tests tied to incidental implementation details | Prefer stable checks of required behavior; retain implementation-specific assertions when those details are part of the required contract. |
+| Ordinary edits with no-tombstones available | Allow automatic selection within the requested scope; preserve review-only requests and unrelated work. |
+| Documentation is updated after an implementation is replaced | Explain current behavior directly; retain historical comparisons only for a concrete reader need. |
+| A private helper or file is removed | Test supported behavior and inspect references; avoid a permanent absence test justified solely by the removal. |
+| An absence assertion enforces an established public contract | Keep proportionate coverage of that observable requirement, such as a retired endpoint's required response. |
+| A regression test was motivated by an old bug | Preserve the required behavior coverage; a historical origin or negative assertion alone does not make it a tombstone. |
+| Migration guidance, compatibility, or decision history has a current purpose | Preserve the useful material in its appropriate location, following project requirements. |
 | Requested work complete and applicable checks pass | Finish and report deferred findings; do not extend the task for unrelated improvements. |
 | An unrelated defect or cleanup opportunity appears during work or review | Ask before further investigation, fixes, or delegation, or defer it with available evidence and a next step. |
 | A newly discovered issue blocks the requested outcome | Resolve it within existing authorization; ask if resolving it exceeds that scope. |

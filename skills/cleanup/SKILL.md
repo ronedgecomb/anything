@@ -28,6 +28,7 @@ A full sweep covers the relevant authored areas of the repository. Generated out
 Use the applicable lenses in [references/sweep-guide.md](references/sweep-guide.md). Start with read-only investigation so proposed changes reflect the repository as a whole. Trace related patterns across areas before deciding what to consolidate.
 
 - Look for repeated logic or configuration, unnecessary complexity, obsolete material, unclear boundaries, misplaced files, brittle tests, stale documentation, and evidenced performance costs.
+- Look for documentation, comments, and tests that merely memorialize removed implementations. Retain references and absence checks with a concrete ongoing purpose; preserve meaningful regression coverage and necessary migration guidance.
 - Tie each candidate to a practical consequence: inconsistent fixes, avoidable coupling, difficult navigation, fragile changes, wasted resources, or another observable maintenance problem. Separate facts, hypotheses, and preferences.
 - Preserve intentional duplication where it supports independent installation, distinct behavior or ownership, fixtures, examples, generated sources, or required license and attribution files. Similar text alone does not justify a shared abstraction.
 - Before removing apparently unused material, check relevant entry points, exports, dynamic loading, configuration, scripts, packaging, and compatibility obligations. An empty reference search is evidence to investigate, not proof of disuse.
@@ -74,4 +75,4 @@ Report:
 
 Finish when the bounded sweep and authorized changes are complete and applicable verification is satisfied, or clearly identify outstanding requirements. Do not repeat sweeps solely to find more work or require a repository with zero possible improvements.
 
-When installed and useful, interview, orchestrate, task-plan, repo-style, fresh-review, approval-gate, and git-style can support the corresponding stages. Apply the guidance above directly when they are unavailable. Setup remains a separate, explicitly requested configuration task.
+When installed and useful, interview, orchestrate, task-plan, repo-style, no-tombstones, fresh-review, approval-gate, and git-style can support the corresponding stages. Apply the guidance above directly when they are unavailable. Setup remains a separate, explicitly requested configuration task.
