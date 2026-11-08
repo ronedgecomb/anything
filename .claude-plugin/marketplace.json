@@ -2,7 +2,9 @@
   "name": "anything-marketplace",
   "description": "Opinionated, lightweight agent skills for pretty much anything.",
   "owner": {
-    "name": "Ron Edgecomb"
+    "name": "Ron Edgecomb",
+    "email": "ronedgecomb@pm.me",
+    "url": "https://ronedgecomb.dev/"
   },
   "plugins": [
     {

@@ -1,9 +1,11 @@
 {
   "name": "anything",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "Opinionated, lightweight agent skills for pretty much anything.",
   "author": {
-    "name": "Ron Edgecomb"
+    "name": "Ron Edgecomb",
+    "email": "ronedgecomb@pm.me",
+    "url": "https://ronedgecomb.dev/"
   },
   "license": "Apache-2.0",
   "repository": "https://github.com/ronedgecomb/anything",
