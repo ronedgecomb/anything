@@ -7,6 +7,7 @@ Start with the skills you need. Setup is optional: useful defaults are included 
 ## Defaults
 
 - Match the amount of planning, questioning, verification, and documentation to the task.
+- Prefer the smallest clear, complete change. Add complexity when it has a concrete benefit, and tests when they provide meaningful confidence.
 - Follow the user's request and existing project conventions. Use anything's defaults for choices they leave open.
 - Delegate only when it is useful, available, and permitted. Work directly when it is not.
 - Keep decisions and findings grounded in evidence. Distinguish independent review from self-review.

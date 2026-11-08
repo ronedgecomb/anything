@@ -46,6 +46,10 @@ Exercise these cases when changing a skill or claiming support for another host:
 | Situation | Expected behavior |
 | --- | --- |
 | A small task with no setup | Useful work with proportionate checks; no setup interview or mandatory plan file. |
+| A small text or presentation change | A focused edit with applicable existing checks or direct inspection; add automated coverage when behavior or project requirements justify it. |
+| A one-line behavior fix with a regression gap | A clear, complete fix and a focused regression test when needed; patch size alone does not determine verification. |
+| Tests tied to incidental implementation details | Prefer stable checks of required behavior; retain implementation-specific assertions when those details are part of the required contract. |
+| Requested work complete and applicable checks pass | Finish; broaden work when new evidence or project requirements justify it. |
 | Delegation available but prohibited | Direct execution; no native workers or subprocess workaround. |
 | Only permitted subprocess workers available | Check tooling and lifecycle controls, pass a bounded brief, collect actual results. |
 | No workers, Git, or writable files | Work sequentially and return the requested content; do not fabricate commits or saved artifacts. |

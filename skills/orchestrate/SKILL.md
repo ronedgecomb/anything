@@ -15,6 +15,8 @@ Own the requested outcome, integration, evidence, and conversation with the user
 3. Choose the smallest useful plan. Keep short tasks in the conversation; persist a record when continuity or complexity benefits. A task-plan skill is optional.
 4. Select the stages this task needs: investigation, research, drafting or implementation, documentation, review, verification, and delivery. Skip stages that add no value. A task need not involve code, Git, or publication.
 
+Prefer the smallest clear, complete change that satisfies the request and follows project conventions. Favor readability and maintainability over minimizing line count. Reuse existing patterns; introduce abstractions, dependencies, configuration, or broader refactoring when they solve a concrete problem in the requested work.
+
 ## Choose how to execute
 
 Check the relevant capabilities and permissions in the current session. Availability alone is not authorization; do not infer capabilities from the product name or promise tools you do not have.
@@ -45,12 +47,16 @@ Check important claims against the artifacts or source evidence before reporting
 
 Review the result at an appropriate scope. A separate reviewer can help when available and permitted; otherwise make a deliberate self-review and label it accurately. If independent review is an explicit requirement, state when it remains unmet. A fresh-review skill can help but is not required.
 
-Run checks appropriate to the work and the project's rules. After changes, repeat affected checks; run a full suite when required or justified. Report pre-existing or unrelated failures without silently expanding the task to fix everything.
+Choose verification that gives meaningful confidence in the affected behavior and meets the project's rules. Reuse existing checks where they suffice. Add or update tests to cover a meaningful failure or required behavior, favoring stable assertions about observable results. Tests that duplicate coverage or lock in incidental implementation details need a concrete benefit.
+
+After changes, repeat affected checks; run a full suite when required or justified by the change's risk. Report pre-existing or unrelated failures without silently expanding the task to fix everything.
 
 Git branches, worktrees, commits, pull requests, deployment, and cleanup are conditional steps. Follow project conventions and the actual request. Do not make a shipping action part of every task; resolve missing authorization before taking it.
 
 ## Communicate and finish
 
 Give concise updates during sustained work: what is known, what completed, and what remains. Do not present a worker's forecast as a result.
+
+Finish once the requested outcome is complete and applicable checks pass. Broaden implementation or verification when new evidence or project requirements justify it.
 
 Deliver the requested artifact or answer with the evidence needed to assess it. State verification limits and genuine outstanding requirements. Update an existing record when useful; do not require a new document, persistent memory entry, or TODO system for every task.

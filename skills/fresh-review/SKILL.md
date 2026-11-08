@@ -36,7 +36,7 @@ Each finding should include:
 - A failure scenario or explanation of why the result misses its goal.
 - A proportionate correction.
 
-Separate confirmed defects, unresolved questions, and preferences. Verify a finding before accepting it; agreement between reviewers is not proof. Keep recommendations useful and avoid inventing issues to fill a report.
+Separate confirmed defects, unresolved questions, and preferences. Verify a finding before accepting it; agreement between reviewers is not proof. Identify unnecessary complexity or brittle verification where it has a practical cost, and avoid inventing issues to fill a report.
 
 ## Triage and follow through
 
