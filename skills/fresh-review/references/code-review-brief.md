@@ -16,6 +16,7 @@ Look for:
 - Data, concurrency, compatibility, and security issues relevant to this change.
 - Inconsistent interfaces, duplicated rules, or complexity with a practical cost.
 - Tests that duplicate coverage without useful confidence or depend on incidental implementation details, making harmless changes fail.
+- Documentation, comments, or tests kept solely to memorialize a removed implementation. Preserve references and absence checks with a concrete ongoing purpose, including required migration guidance and meaningful regression coverage.
 - Requirements that the artifact misses, and assumptions that need evidence.
 
 Return findings by importance. For each, identify the source location, a reproducible or well-supported failure scenario, and a proportionate fix. Distinguish confirmed defects from questions and preferences.

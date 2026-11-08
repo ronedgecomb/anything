@@ -8,6 +8,7 @@ Start with the skills you need. Setup is optional: useful defaults are included 
 
 - Match the amount of planning, questioning, verification, and documentation to the task.
 - Prefer the smallest clear, complete change. Add complexity when it has a concrete benefit, and tests when they provide meaningful confidence.
+- Document current behavior and test current requirements. Retain implementation history when it serves a concrete ongoing need.
 - Follow the user's request and existing project conventions. Use anything's defaults for choices they leave open.
 - Delegate only when it is useful, available, and permitted. Work directly when it is not.
 - Keep decisions and findings grounded in evidence. Distinguish independent review from self-review.
@@ -30,6 +31,7 @@ The skills are instructions loaded when relevant or explicitly invoked; installi
 | [approval-gate](skills/approval-gate/SKILL.md) | Resolve authorization for consequential actions without repeating approvals unnecessarily. |
 | [git-style](skills/git-style/SKILL.md) | Prepare focused changes and use Conventional Commits by default. |
 | [repo-style](skills/repo-style/SKILL.md) | Keep project structure and documentation clear and proportional. |
+| [no-tombstones](skills/no-tombstones/SKILL.md) | Keep code, tests, comments, and documentation focused on current requirements during ordinary edits, review, and cleanup. |
 
 Each skill works on its own. References to other skills are optional helpers; their installation is not a prerequisite.
 

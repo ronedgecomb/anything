@@ -26,6 +26,7 @@ A skill, project file, or installed tool cannot grant permission that the curren
 | Git | Prefer Conventional Commits when the project has no established message convention. Follow its branch and integration rules. |
 | Structure | Keep the existing project shape unless changing it solves a concrete problem. |
 | Documentation | Maintain concise entry points and durable decisions close to their subject. Add documents when they have a reader and a purpose. |
+| Implementation history | Keep documentation and tests centered on current requirements. Retain historical references and absence checks for concrete ongoing needs, including meaningful regression coverage and necessary migration guidance. |
 
 These defaults do not require Git, subagents, a particular shell, a task directory, a pull request, a security reviewer, or a deployment step.
 
@@ -40,6 +41,8 @@ Do not persist today's agent count, installed tool list, authentication state, a
 ## Composition
 
 Use another skill when it is installed and helps. Otherwise apply the current skill directly. Resolve supporting files relative to the directory containing that skill's `SKILL.md`.
+
+No-tombstones is eligible for automatic selection during ordinary edits, review, and cleanup. It keeps affected material focused on current requirements within the task's scope. Fresh-review and cleanup also check for existing tombstones, preserving references and tests with a concrete ongoing purpose.
 
 Cleanup provides an explicitly requested repository sweep using these defaults. Its relevant areas and findings are within that requested scope; ordinary tasks still defer unrelated cleanup. See [repository cleanup](cleanup.md) for coverage and optional skill composition.
 

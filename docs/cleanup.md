@@ -33,6 +33,7 @@ Every helper is optional; cleanup includes enough guidance and its own bundled s
 | orchestrate | Coordinate areas, worker lifecycles, integration, and completion. |
 | task-plan | Keep coverage, decisions, and progress when continuity benefits. |
 | repo-style | Guide discoverable structure and concise documentation. |
+| no-tombstones | Keep explanations, comments, and tests focused on current requirements; preserve historical references with an ongoing purpose. |
 | fresh-review | Review the integrated result in a separate context when possible; otherwise label self-review. |
 | approval-gate | Resolve a new authorization boundary using the concrete proposed action. |
 | git-style | Prepare coherent Git changes when Git operations are requested. |
