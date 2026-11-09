@@ -6,6 +6,8 @@
   </picture>
 </h1>
 
+[![skills.sh](https://skills.sh/b/ronedgecomb/anything)](https://skills.sh/ronedgecomb/anything)
+
 Opinionated, lightweight agent skills for pretty much anything.
 
 Start with the skills you need. Setup is optional: useful defaults are included in each skill, and setup records your project's preferences in `AGENTS.md`.
