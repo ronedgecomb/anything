@@ -42,6 +42,8 @@ Do not persist today's agent count, installed tool list, authentication state, a
 
 Use another skill when it is installed and helps. Otherwise apply the current skill directly. Resolve supporting files relative to the directory containing that skill's `SKILL.md`.
 
+[Using anything](../skills/using-anything/SKILL.md) explains when to read each skill, how their responsibilities differ, and how to combine them. Consult available descriptions first, then read the selected skills and the supporting files needed for the task. The guide helps select guidance, orchestrate coordinates execution, and task-plan maintains a useful record; use each when that responsibility helps. Skills can still be used directly or installed individually.
+
 No-tombstones is eligible for automatic selection during ordinary edits, review, and cleanup. It keeps affected material focused on current requirements within the task's scope. Fresh-review and cleanup also check for existing tombstones, preserving references and tests with a concrete ongoing purpose.
 
 Cleanup provides an explicitly requested repository sweep using these defaults. Its relevant areas and findings are within that requested scope; ordinary tasks still defer unrelated cleanup. See [repository cleanup](cleanup.md) for coverage and optional skill composition.

@@ -30,6 +30,7 @@ The skills are instructions loaded when relevant or explicitly invoked; installi
 
 | Skill | Use it to |
 | --- | --- |
+| [using-anything](skills/using-anything/SKILL.md) | Choose which skills to read and combine, with guidance on their boundaries and when each helps. |
 | [setup](skills/setup/SKILL.md) | Explicitly initialize or update project preferences in `AGENTS.md`. Manual invocation only. |
 | [cleanup](skills/cleanup/SKILL.md) | Explicitly sweep a repository for maintainability improvements, fix clear issues, and discuss larger changes. Manual invocation only. |
 | [interview](skills/interview/SKILL.md) | Clarify a topic, goal, decision, or set of requirements through an adaptive conversation. |
@@ -42,6 +43,8 @@ The skills are instructions loaded when relevant or explicitly invoked; installi
 | [no-tombstones](skills/no-tombstones/SKILL.md) | Keep code, tests, comments, and documentation focused on current requirements during ordinary edits, review, and cleanup. |
 
 Each skill works on its own. References to other skills are optional helpers; their installation is not a prerequisite.
+
+Use `using-anything` when choosing between skills or combining them for substantial work. It provides selection guidance and examples; focused tasks can use an applicable skill directly. See [skill discovery and selection](docs/compatibility.md#skill-discovery-and-selection) for loading expectations.
 
 ## Setup
 
