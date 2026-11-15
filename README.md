@@ -95,10 +95,13 @@ Choose the skills and agents you want. See [installation](docs/installation.md) 
 - `.agents/plugins/marketplace.json` and `.claude-plugin/marketplace.json`: installation catalogs.
 - `package.json`: Pi package metadata.
 - `assets/`: wordmark and plugin icon.
+- `evals/`: optional selection and application scenarios for contributors.
 
 ## Contributing
 
 Read [AGENTS.md](AGENTS.md) for repository conventions and verification guidance. `CLAUDE.md` imports the same instructions. These files guide work on this repository; installed skills do not inject them into your project.
+
+Use the [optional skill evaluations](evals/README.md) to replay selected compatibility cases or check a behavior change. Live runs are on demand and use the capabilities and permissions of the host being evaluated.
 
 ## License
 

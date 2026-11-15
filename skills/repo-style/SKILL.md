@@ -37,6 +37,8 @@ Write for the intended reader in plain language. Lead with the purpose or action
 - Update affected existing documentation when behavior changes. Remove stale instructions instead of adding a competing explanation.
 - Create a plan, decision record, changelog entry, or guide when requested or useful to its readers. Do not generate a set of ceremonial documents for every task.
 
+When revising factual or technical prose, identify the details that must survive: names, numbers and units, commands, paths, links, conditions, trade-offs, established terminology, and uncertainty. Compare the edited text with the original and its sources. Preserve those details or explain factual corrections supported by evidence; clearer wording must preserve the claim's scope and necessary qualifiers. Match the depth of this check to the risk of changing the meaning; a separate inventory or report is optional.
+
 Keep sensitive material out of public documentation. Use the project's normal configuration and secret-handling conventions.
 
 ## Project preferences and verification
