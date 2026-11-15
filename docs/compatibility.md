@@ -4,6 +4,12 @@ Behavioral instructions are based on capabilities and permissions, not product n
 
 The following invocation behavior is documented by the hosts. It is not a claim that complete sessions have been tested in every host and version.
 
+## Skill discovery and selection
+
+[Using anything](../skills/using-anything/SKILL.md) is available for relevant selection or explicit invocation when installed. Follow the current host's discovery and loading mechanisms; installing the guide does not guarantee that it is loaded at session startup. A focused task can use another skill directly.
+
+The guide's map describes the collection, including skills that may be absent from an individual installation. Check the available catalog and invocation controls before selecting a skill, and read its actual instructions before relying on them. Load only needed references. Setup and cleanup retain their explicit invocation requirements; mentioning them in the map does not start their work.
+
 ## Manual setup and cleanup
 
 | Host | Selection control |
@@ -62,6 +68,12 @@ Exercise these cases when changing a skill or claiming support for another host:
 | Situation | Expected behavior |
 | --- | --- |
 | A small task with no setup | Useful work with proportionate checks; no setup interview or mandatory plan file. |
+| Choosing between overlapping skills | Consult available descriptions, read the selected instructions and needed references, and use the skills whose distinct responsibilities help the task. |
+| A task changes stage while using the guide | Reassess the useful skills while preserving settled decisions, current scope, and existing authorization. |
+| The guide lists a skill that is unavailable | Continue directly when available guidance suffices; report a material gap and clarify when explicitly requested instructions are essential. Do not invent invocation or install skills as a side effect. |
+| Only using-anything is installed | Use its self-contained selection guidance without requiring sibling skills or root repository documents. |
+| The guide is read during an ordinary task or findings-only review | Preserve the task's mode and scope; listing setup and cleanup does not invoke them or authorize a sweep or instruction edits. |
+| The guide is installed in a host | Use the host's discovery mechanisms; do not claim guaranteed session-start loading. Other skills remain directly usable. |
 | A small text or presentation change | A focused edit with applicable existing checks or direct inspection; add automated coverage when behavior or project requirements justify it. |
 | A one-line behavior fix with a regression gap | A clear, complete fix and a focused regression test when needed; patch size alone does not determine verification. |
 | Tests tied to incidental implementation details | Prefer stable checks of required behavior; retain implementation-specific assertions when those details are part of the required contract. |
