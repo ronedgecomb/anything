@@ -12,7 +12,7 @@ The fixtures are synthetic and bundled in the catalog. Run them in an isolated s
 | `invocation` | The same environment, with the explicit skill request in the task. | Whether the host's manual invocation path works and preserves the requested mode. This is separate from natural selection. |
 | `application` | The fixture, runner constraints, task messages, and the specified local skill instructions. | Whether the loaded instructions are followed. Supplying these instructions does not test host discovery or selection. |
 
-The negative discussion case deliberately mentions setup and cleanup as subjects. Reading their documentation to answer a question is different from invoking them or starting their work. The small-edit case checks that the guide is optional; reading useful guidance is not itself a failure.
+The negative discussion case treats setup, cleanup, and handoff as subjects for an explanation. The small-edit case checks that the guide is optional while allowing useful guidance to be read.
 
 ## Replay one case
 

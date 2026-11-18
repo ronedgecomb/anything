@@ -1,0 +1,7 @@
+interface:
+  display_name: "Handoff"
+  short_description: "Prepare a review or implementation brief to share"
+  default_prompt: "Use $handoff to prepare a Markdown brief I can pass to another agent."
+
+policy:
+  allow_implicit_invocation: false

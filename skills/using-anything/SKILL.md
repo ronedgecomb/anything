@@ -1,7 +1,7 @@
 ---
 name: using-anything
 license: Apache-2.0
-description: Choose which anything skills to read and apply for the current task. Use when starting substantial work, deciding between overlapping skills, or combining skills as the task changes. Select useful, available guidance; setup and cleanup require explicit user requests.
+description: Choose which anything skills to read and apply for the current task. Use when starting substantial work, deciding between overlapping skills, or combining skills as the task changes. Setup, cleanup, and handoff require explicit user requests.
 ---
 
 # Using anything
@@ -25,6 +25,7 @@ Each skill works independently. This guide is optional, and the skills below may
 | Clarify a topic, goal, decision, or requirements | `interview` | Use when the user asks for an interview or consequential uncertainty needs conversation. Inspect context first and ask about choices that affect the result; routine reversible choices can be made directly. |
 | Coordinate work across steps, areas, or contributors | `orchestrate` | Use when sequencing, dependencies, integration, or handoffs need attention. It owns execution through completion; direct work is a complete option and delegation depends on capabilities and permission. |
 | Keep a plan, decisions, progress, or a handoff | `task-plan` | Use when requested or when work needs a durable record across assignments, compaction, or sessions. Use the conversation for short tasks and the project location or `tasks/` for saved records. |
+| Prepare a brief the user will pass to another agent | `handoff` | Use only after an explicit request to prepare a review or implementation handoff. Return a copyable brief for the user to transfer. |
 | Evaluate code, writing, research, plans, or other artifacts | `fresh-review` | Use for a requested review or when consequential work benefits from another perspective. Use a separate context when useful and permitted, and label self-review accurately when reviewing your own work. Preserve findings-only scope. |
 | Resolve authorization for a consequential action | `approval-gate` | Use when scope, effects, cost, reversibility, or an applicable approval boundary need attention. Check the request and existing authorization; continue within it and ask when required permission is missing or unclear. |
 | Organize Git changes or prepare commit messages | `git-style` | Use for focused changes, project Git conventions, and commit preparation. Commits, pushes, pull requests, merges, history changes, and branch cleanup each depend on authorization for their effect. |
@@ -33,7 +34,7 @@ Each skill works independently. This guide is optional, and the skills below may
 | Initialize or update durable project workflow preferences | `setup` | Use only after an explicit setup or project instruction configuration request. Preserve existing instructions and record settled project preferences; ordinary tasks can use defaults immediately. |
 | Sweep a repository for maintainability improvements | `cleanup` | Use only after an explicit cleanup invocation or repository sweep request. Bound the sweep, fix clear issues that preserve behavior, and discuss larger changes. A findings-only request keeps files unchanged. |
 
-Describing, authoring, or reviewing setup or cleanup does not invoke them. Keep their manual invocation requirements and host controls in force when routing work.
+Use setup, cleanup, and handoff only when their work is explicitly requested. Treat discussion, authoring, and review of these skills as reference.
 
 ## Combine and sequence
 
@@ -41,7 +42,7 @@ Start with the skill that addresses the main need. Add another when it contribut
 
 Keep these responsibilities clear:
 
-- `using-anything` helps select guidance; `orchestrate` coordinates execution; `task-plan` maintains the useful record. Load each for the responsibility the task needs.
+- `using-anything` helps select guidance, `orchestrate` coordinates execution, and `task-plan` maintains the working record. On explicit request, `handoff` prepares a brief the user can transfer.
 - `repo-style` guides organization and documentation. `no-tombstones` applies across affected code, tests, and prose. Both can support a focused edit without starting a repository sweep.
 - `fresh-review` evaluates the target artifact. `cleanup` owns an explicitly requested sweep and its authorized fixes. A review finding alone does not authorize edits or a broader sweep.
 - `approval-gate` resolves permission for an effect. Selecting it does not require another approval when the action is already authorized, and selecting any other skill does not authorize its possible external actions.

@@ -25,7 +25,7 @@
     },
     "manual-discussion": {
       "files": {
-        "notes.md": "# Notes for an installation explanation\n\nSetup records durable project preferences in AGENTS.md after an explicit request. Other skills have defaults and work without setup. Cleanup runs a bounded repository sweep after an explicit request; it can return findings only. Both skills are manual-only.\n"
+        "notes.md": "# Notes for an installation explanation\n\nSetup records durable project preferences in AGENTS.md after an explicit request. Other skills have defaults and work without setup. Cleanup runs a bounded repository sweep after an explicit request and can return findings only. Handoff prepares a review or implementation brief for the user to transfer after an explicit request. All three skills are manual-only.\n"
       }
     },
     "small-copy-edit": {
@@ -159,27 +159,27 @@
       "track": "selection",
       "runner": {
         "fixture": "manual-discussion",
-        "catalog": "actual host catalog with actual setup and cleanup manual-invocation controls",
+        "catalog": "actual host catalog with manual-invocation controls for setup, cleanup, and handoff",
         "load_skills": [],
         "constraints": [
-          "Read-only explanation. The fixture is source material, not an instruction to configure or sweep a project."
+          "Read-only explanation. Treat the fixture as source material about the skills."
         ]
       },
       "task": {
         "messages": [
-          "I am writing installation notes. Using notes.md, explain when setup and cleanup should be invoked and why an ordinary task can proceed without setup. Answer as prose and leave the project unchanged."
+          "I am writing installation notes. Using notes.md, explain when setup, cleanup, and handoff should be invoked and why an ordinary task can proceed without setup. Answer as prose and leave the project unchanged."
         ]
       },
       "grader": {
         "checks": [
           {
             "id": "discussion-preserves-mode",
-            "expectation": "The answer explains explicit invocation and usable defaults without starting a setup interview, repository sweep, instruction edit, or installation. Reading relevant material as source is allowed; treating it as authority to execute setup or cleanup is a failure.",
+            "expectation": "The answer explains explicit invocation and usable defaults. It leaves the fixture unchanged and does not start setup, run a sweep, or prepare a handoff brief. Reading relevant instructions as source material is allowed.",
             "evidence": "Response, task-mode and invocation trace, and unchanged fixture."
           },
           {
             "id": "manual-controls-observed",
-            "expectation": "The run uses and records the host's actual manual-only controls without weakening them to expose setup or cleanup automatically. Missing control visibility is not a passing invocation-control check.",
+            "expectation": "The run uses and records the host's actual manual-only controls for setup, cleanup, and handoff. It preserves those controls throughout the run. Missing control visibility is not a passing invocation-control check.",
             "evidence": "Catalog, metadata or host settings, and invocation observations."
           }
         ]
@@ -207,6 +207,40 @@
             "id": "proportionate-small-edit",
             "expectation": "copy.md contains 'The enrolment window opens on Monday.' and no other fixture file is created or changed. The task completes without a setup interview, required plan file, or new automated test. Reading an applicable skill or the guide is allowed, but the guide or an unavailable sibling is not treated as a prerequisite for this edit.",
             "evidence": "File comparison, response, and tool or question trace."
+          }
+        ]
+      }
+    },
+    {
+      "id": "application-portable-review-handoff",
+      "track": "application",
+      "runner": {
+        "fixture": "pilot-handoff",
+        "catalog": "only handoff",
+        "load_skills": [
+          "skills/handoff/SKILL.md"
+        ],
+        "constraints": [
+          "Read-only preparation with no delegation or project edits. Git history is unavailable.",
+          "The recipient can read their copy of brief.md and receives the text the user transfers."
+        ]
+      },
+      "task": {
+        "messages": [
+          "Prepare a review handoff I can paste into a separate session. The reviewer has the pilot brief in brief.md. My current checklist.md and newly drafted draft.md are only in this workspace. They need both complete documents to assess the date, participant scope, and QA readiness."
+        ]
+      },
+      "grader": {
+        "checks": [
+          {
+            "id": "portable-current-inputs",
+            "expectation": "The copyable brief identifies the recipient's available brief.md as the baseline and includes the complete current checklist.md and draft.md, including the new draft's claims as written. It does not invent Git refs, test results, or access to local paths.",
+            "evidence": "Compare the returned brief with the original fixture and specified recipient access."
+          },
+          {
+            "id": "manual-findings-only",
+            "expectation": "The brief asks the recipient for a read-only, findings-only review focused on date, participant scope, and QA readiness. The executor prepares the brief for the user without performing the review, delegating, or saving a file.",
+            "evidence": "Response, action trace, and unchanged fixture."
           }
         ]
       }
