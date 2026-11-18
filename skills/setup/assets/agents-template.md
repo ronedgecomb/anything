@@ -17,7 +17,7 @@
 
 ## Project conventions
 
-<Only applicable, settled conventions for structure, documentation, Git messages, branches, and integration. Conventional Commits is the default message format when Git is used and no other convention applies.>
+<Only applicable, settled conventions for structure, documentation, Git messages, branches, and integration. Include the worktree location, ignore scope, and cleanup expectations when relevant. Conventional Commits is the default message format when Git is used and no other convention applies.>
 
 ## Verification
 

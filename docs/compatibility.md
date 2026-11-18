@@ -100,6 +100,9 @@ The [optional evaluation catalog](../evals/README.md) provides replayable select
 | No established follow-up destination | Report the issue, evidence or location, and next step in the conversation for a future session; do not create a tracking system or start the work. |
 | Delegation available but prohibited | Direct execution; no native workers or subprocess workaround. |
 | Only permitted subprocess workers available | Check tooling and lifecycle controls, pass a bounded brief, collect actual results. |
+| Parallel Git work benefits from separate checkouts | Follow the project's location convention. Use an ignored `.worktrees/` in a stable checkout when nesting is suitable, or an allowed location outside the checkout. Give workers the checkout path and starting commit. Use distinct branches for independently editing workers and record the branch when present. |
+| A worker checkout is ready for cleanup | Verify ownership and path, and preserve results and evidence before removing it through Git. Keep a checkout that contains other worktrees until they are safely removed or relocated. Treat branch cleanup separately. |
+| Worktree removal fails | Check the command result, resolved directory, and Git registration before retrying. Preserve and report any remaining state. |
 | No workers, Git, or writable files | Work sequentially and return the requested content; do not fabricate commits or saved artifacts. |
 | Review without a separate context | Useful self-review with an accurate independence statement. |
 | An interview without a question tool | Adaptive questions in normal conversation. |

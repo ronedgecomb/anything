@@ -31,11 +31,12 @@ Consider the applicable choices:
 - Whether delegation is welcome, its resource limits, and any requirement for independent review.
 - Appropriate verification and documentation for the work.
 - Existing Git message, branch, and integration conventions when Git is used.
+- For projects that use worktrees, their preferred location, the scope of any ignore rule, and cleanup expectations.
 - Actions the user wants to retain control over, within the environment's permission limits.
 
 Use lightweight defaults where no preference is stated: proportionate planning and checks, consequential questions, useful and permitted delegation with direct execution as a fallback, concise documentation, and Conventional Commits when Git has no other convention. Existing authorization applies within its scope; new or unclear scope needs clarification.
 
-Follow existing Git rules for task records. When the project prefers local records, check whether the chosen location already fits that policy. Change an ignore rule only when the user has authorized that edit.
+Follow existing Git rules for task records and worktree locations. When the project prefers local records, check whether the chosen location already fits that policy. For worktrees inside a checkout, check that the root is ignored and free of tracked paths. Change an ignore rule only when the user has authorized that edit.
 
 ## Record the result
 

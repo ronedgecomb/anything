@@ -18,6 +18,7 @@ Context and inputs:
 
 Scope and boundaries:
 - Own <artifacts, area, or resources>.
+- <Path and starting commit of the assigned worktree, plus its branch if present.>
 - <What other work is happening, if relevant.>
 - Stay within <permissions, cost, time, and tool limits>.
 - <Actions that are out of scope or reserved for the integration owner.>

@@ -61,7 +61,7 @@ Use [references/brief-template.md](references/brief-template.md) for a self-cont
 - Give each worker a bounded outcome, relevant context, constraints, owned artifacts or resources, verification criteria, and a report format. Include the work item's name when tracked and ask for results, checks, and blockers against that item.
 - Confirm how it will access inputs and return results. Supply relevant content when a local path is inaccessible; do not assume shared memory or a shared filesystem.
 - Split independent work. Establish shared decisions or interfaces only when needed, without requiring a preliminary commit.
-- Prevent conflicting writes and shared-resource collisions. Use isolation when supported and helpful, or sequence the work. See [references/parallel-work.md](references/parallel-work.md).
+- Prevent conflicting writes and shared-resource collisions. Use isolation when supported and helpful, or sequence the work. See [parallel work](references/parallel-work.md) for workspace selection and Git worktree setup, handoff, and cleanup.
 - Keep external actions and other restricted work within the authorization assigned to that worker. A handoff cannot expand permission.
 - Track actual completion. Resume an existing worker only if supported; otherwise use a new bounded handoff or finish directly.
 - If delegation fails, inspect what completed, collect useful partial results, and continue through an available path.
