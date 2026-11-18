@@ -11,6 +11,7 @@ Role: <investigate | research | draft | implement | document | review>.
 Outcome: <the concrete result needed>.
 
 Context and inputs:
+- <Work item's name and relevant task-record context, when tracked.>
 - <Relevant task intent, facts, and confirmed decisions.>
 - <Source content, an accessible artifact snapshot, or a path the recipient can read.>
 - <Applicable project instructions.>

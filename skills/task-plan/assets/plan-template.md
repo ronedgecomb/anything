@@ -1,16 +1,18 @@
 # <Task title>
 
-Status: <proposed | in progress | waiting on a stated dependency | complete>.
-Outcome: <the requested result and the evidence that will show it is ready>.
+**Status** <pending, in progress, blocked, or done>
+
+**Outcome** <the requested result and the evidence that will show it is ready>
 
 ## Context and constraints
 
 - <Relevant facts, instructions, source material, scope, and boundaries.>
 
-## Approach
+## Work items
 
-1. <First useful step.>
-2. <Next useful step.>
+| Item | Outcome and completion condition | Assignee | Status | Dependencies, results, and blockers |
+| --- | --- | --- | --- | --- |
+| <Stable name> | <Deliverable and how to check it> | <Assignee and any worker reference needed> | <Pending, in progress, blocked, or done> | <Prerequisites, output references, result with evidence, and what would unblock the work, as applicable> |
 
 ## Decisions
 
@@ -18,11 +20,10 @@ Outcome: <the requested result and the evidence that will show it is ready>.
 - Assumed: <assumption and what would change it>.
 - Open: <question and what depends on its answer>.
 
-## Progress and handoff
+## Checkpoint
 
-- Done: <observed result>.
-- Next: <the next action, and its owner if delegated>.
-- Needed context: <content or resources a recipient can actually access>.
+- **Current state** <Latest verified progress or final result.>
+- **Next action** <What to do next and who owns it, or what needs to change before work can resume.>
 
 ## Verification
 

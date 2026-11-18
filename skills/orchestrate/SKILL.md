@@ -12,12 +12,23 @@ Own the requested outcome, integration, evidence, and conversation with the user
 
 1. Read the available context and identify the outcome, constraints, and meaningful unknowns.
 2. Clarify decisions that affect the result. Use an interview skill if installed and useful, or ask directly. Do not invoke setup for an ordinary task.
-3. Choose the smallest useful plan. Keep short tasks in the conversation; persist a record when continuity or complexity benefits. A task-plan skill is optional.
+3. Choose the smallest useful plan. Keep short tasks in the conversation and save a task record when continuity or coordination warrants it.
 4. Select the stages this task needs: investigation, research, drafting or implementation, documentation, review, verification, and delivery. Skip stages that add no value. A task need not involve code, Git, or publication.
 
 Prefer the smallest clear, complete change that satisfies the request and follows project conventions. Favor readability and maintainability over minimizing line count. Reuse existing patterns; introduce abstractions, dependencies, configuration, or broader refactoring when they solve a concrete problem in the requested work.
 
 Continue work needed to deliver or verify the requested outcome within existing authorization. Defer unrelated defects, cleanup, and improvements unless the user approves expanding the task. Do not pursue further investigation, implementation, or delegation of that work without approval; discovery alone does not authorize it. If an issue blocks the requested outcome and resolving it exceeds authorization, explain the dependency and ask.
+
+## Keep a task record
+
+Save a record when requested, when substantial work is likely to span sessions or context compaction, or when assignments and dependencies need tracking. Use task-plan when available and helpful.
+
+When file writes are in scope and available, follow the requested location or project conventions and reuse the record for the same task. If a new record has no chosen location, save it as `tasks/<task>.md` under the project root using a distinct, descriptive name. Follow existing Git rules and project preferences for local or shared records. When writes are outside scope or unavailable, keep a textual checkpoint and say it is unsaved.
+
+- Before substantial work or dispatch, record the outcome, success criteria, constraints, decisions, and work items. Give each item a stable name, a deliverable and completion condition, a status, an assignee when applicable, and any dependencies. Share the path when you save a record. Pass a self-contained checkpoint when handing off without an accessible file.
+- The coordinating agent owns edits to the task record. For delegated work, save any worker or output references needed to resume it or collect the result as they become available.
+- Update assignments, decisions, and status as work progresses and reports arrive. Mark an item done once you have evidence that it meets its completion condition. Record the result and supporting evidence in the same update. Keep the next action and any blockers current, and refresh the checkpoint before a pause or handoff.
+- After compaction or when resuming, reopen the matching record from its known path or record location. Use an available checkpoint if the file is inaccessible. Reconcile it with current instructions, artifacts, and observable worker state before reassigning or restarting work.
 
 ## Investigate unexpected results
 
@@ -47,7 +58,7 @@ Respect the user's resource limits and the actual controls available for worker 
 
 Use [references/brief-template.md](references/brief-template.md) for a self-contained handoff, adapting the role and report to the task.
 
-- Give each worker a bounded outcome, relevant context, constraints, owned artifacts or resources, verification criteria, and a report format.
+- Give each worker a bounded outcome, relevant context, constraints, owned artifacts or resources, verification criteria, and a report format. Include the work item's name when tracked and ask for results, checks, and blockers against that item.
 - Confirm how it will access inputs and return results. Supply relevant content when a local path is inaccessible; do not assume shared memory or a shared filesystem.
 - Split independent work. Establish shared decisions or interfaces only when needed, without requiring a preliminary commit.
 - Prevent conflicting writes and shared-resource collisions. Use isolation when supported and helpful, or sequence the work. See [references/parallel-work.md](references/parallel-work.md).
@@ -83,6 +94,6 @@ Give concise updates during sustained work: what is known, what completed, and w
 
 Finish once the requested outcome is complete and applicable checks pass. New evidence can justify more work needed for that outcome within authorization; unrelated findings do not extend the task.
 
-Deliver the requested artifact or answer with the evidence needed to assess it. State verification limits and genuine outstanding requirements. Update an existing task record when useful; do not require a new document or persistent memory entry for every task.
+Deliver the requested artifact or answer with the evidence needed to assess it. State verification limits and genuine outstanding requirements. Close an active task record with the integrated outcome and checks actually run. Include the saved path or checkpoint text in the final handoff based on what the recipient can access.
 
 For deferred findings, briefly report the issue, available evidence or location, and a suggested next step that another session can use. Ask before adding them to an existing tracker or `TODO.md` unless the user or project instructions already authorize recording them there. Without an established destination, report them in the conversation; do not create a tracking system or start the follow-up work.
