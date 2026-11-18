@@ -27,13 +27,15 @@ Use the interview skill if available, or ask directly. Ask only about choices wh
 Consider the applicable choices:
 
 - The project's purpose, typical tasks, and what a good result looks like.
-- How much clarification and planning different tasks need, and where durable task records belong.
+- How much clarification and planning different tasks need. When durable task records matter, consider where they belong and, in Git projects, whether to keep them local or share them.
 - Whether delegation is welcome, its resource limits, and any requirement for independent review.
 - Appropriate verification and documentation for the work.
 - Existing Git message, branch, and integration conventions when Git is used.
 - Actions the user wants to retain control over, within the environment's permission limits.
 
 Use lightweight defaults where no preference is stated: proportionate planning and checks, consequential questions, useful and permitted delegation with direct execution as a fallback, concise documentation, and Conventional Commits when Git has no other convention. Existing authorization applies within its scope; new or unclear scope needs clarification.
+
+Follow existing Git rules for task records. When the project prefers local records, check whether the chosen location already fits that policy. Change an ignore rule only when the user has authorized that edit.
 
 ## Record the result
 

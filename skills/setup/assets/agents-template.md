@@ -7,7 +7,8 @@
 
 - Follow explicit task decisions and existing project conventions within the environment's restrictions.
 - Inspect available context before asking questions. Clarify consequential unknowns in short rounds.
-- Match planning, verification, and documentation to the task. Use <the agreed task-record location, or omit this sentence> when a persistent plan helps.
+- Match planning, verification, and documentation to the task.
+- <When to use a durable task record, where to save it, and whether it should stay local or be shared. Keep only settled choices.>
 - Prefer the smallest clear, complete change that meets the request and follows project conventions. Add complexity when it has a concrete benefit.
 - Delegate only when useful, available, and permitted. Otherwise work directly. Recheck capabilities each session.
 - Prefer a separate context for review when useful; label self-review honestly when no separate context is available.

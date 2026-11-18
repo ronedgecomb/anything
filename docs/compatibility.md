@@ -70,6 +70,8 @@ The [optional evaluation catalog](../evals/README.md) provides replayable select
 | Situation | Expected behavior |
 | --- | --- |
 | A small task with no setup | Useful work with proportionate checks; no setup interview or mandatory plan file. |
+| Substantial work needs continuity or assignment tracking | Save one record in the chosen location or `tasks/<task>.md` when file writes are in scope. The coordinating agent tracks assignments, references needed to resume work, results with evidence, and the next action. |
+| Work resumes after compaction or handoff | Reopen the matching record and reconcile it with current instructions, artifacts, and observable worker state before continuing. Pass a self-contained checkpoint when there is no accessible file. |
 | Choosing between overlapping skills | Consult available descriptions, read the selected instructions and needed references, and use the skills whose distinct responsibilities help the task. |
 | A task changes stage while using the guide | Reassess the useful skills while preserving settled decisions, current scope, and existing authorization. |
 | The guide lists a skill that is unavailable | Continue directly when available guidance suffices; report a material gap and clarify when explicitly requested instructions are essential. Do not invent invocation or install skills as a side effect. |
@@ -106,6 +108,7 @@ The [optional evaluation catalog](../evals/README.md) provides replayable select
 | Skill content or plugin behavior changes for a release | Bump the version consistently across all three manifests; related changes in one release share a bump. |
 | A new skill is missing after an installed Claude plugin is updated | Check the installed components, manifest version, project scope, and enabled state. Refresh the marketplace, update the plugin, and reload or restart the session; do not assume the checkout and installed cache match. |
 | Setup with existing instructions | Preserve unrelated content, resolve conflicts, and update only settled preferences. |
+| Local or shared task records in a Git project | Follow existing Git rules. Explicit setup can record the chosen location and sharing preference. Apply ignore-rule changes only when authorized. |
 | Setup with limited discovery | Omit unknown commands and unsupported claims rather than inventing them. |
 | Authoring or discussing cleanup, or doing an ordinary implementation task | Do not start a cleanup sweep without an explicit request. |
 | Cleanup with no additional mode specified | Inspect the requested scope, fix clear issues that preserve behavior, and discuss larger changes; reuse existing authorization. |

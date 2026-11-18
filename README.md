@@ -15,6 +15,7 @@ Start with the skills you need. Setup is optional: useful defaults are included 
 ## Defaults
 
 - Match the amount of planning, questioning, verification, and documentation to the task.
+- Keep a resumable record for substantial work that spans sessions or needs assignment tracking. Use the project's chosen location or `tasks/<task>.md`. See [durable task records](docs/defaults.md#durable-task-records).
 - Prefer the smallest clear, complete change. Add complexity when it has a concrete benefit, and tests when they provide meaningful confidence.
 - Document current behavior and test current requirements. Retain implementation history when it serves a concrete ongoing need.
 - Follow the user's request and existing project conventions. Use anything's defaults for choices they leave open.
@@ -35,7 +36,7 @@ The skills are instructions loaded when relevant or explicitly invoked; installi
 | [cleanup](skills/cleanup/SKILL.md) | Explicitly sweep a repository for maintainability improvements, fix clear issues, and discuss larger changes. Manual invocation only. |
 | [interview](skills/interview/SKILL.md) | Clarify a topic, goal, decision, or set of requirements through an adaptive conversation. |
 | [orchestrate](skills/orchestrate/SKILL.md) | Coordinate work at the right scale, with optional delegation. |
-| [task-plan](skills/task-plan/SKILL.md) | Keep a concise plan and handoff record when the task benefits from one. |
+| [task-plan](skills/task-plan/SKILL.md) | Record goals, work items, decisions, and checkpoints for work that needs a durable handoff. |
 | [fresh-review](skills/fresh-review/SKILL.md) | Review an artifact using a separate context when possible, or an explicitly labeled self-review. |
 | [approval-gate](skills/approval-gate/SKILL.md) | Resolve authorization for consequential actions without repeating approvals unnecessarily. |
 | [git-style](skills/git-style/SKILL.md) | Prepare focused changes and use Conventional Commits by default. |
@@ -49,6 +50,8 @@ Use `using-anything` when choosing between skills or combining them for substant
 ## Setup
 
 Explicitly invoke `setup` when you want to configure a project. It reads what is already there, asks only about unresolved choices, and creates or updates a small section of the root `AGENTS.md`. Existing instructions are preserved. Without file access it returns a draft instead.
+
+Setup can record where task records belong and whether to keep them local or share them. Existing Git rules apply by default.
 
 Project preferences persist; tool availability and permissions are checked in the current session. Ordinary tasks do not trigger setup.
 

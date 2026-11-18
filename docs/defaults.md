@@ -14,7 +14,7 @@ A skill, project file, or installed tool cannot grant permission that the curren
 | --- | --- |
 | Understanding | Inspect available context before asking for facts. Ask about consequential unknowns. |
 | Interviews | Use short rounds and adapt their depth to the topic. Recommendations should explain their trade-offs. |
-| Planning | Use the smallest plan that makes the task clear. Persist one when continuity or complexity benefits. |
+| Planning | Use the smallest plan that makes the task clear. Save a task record when work needs a durable handoff or assignment tracking. |
 | Delegation | Use it only when useful, available, and permitted. Direct sequential work is a complete execution mode. |
 | Implementation | Prefer the smallest clear, complete change that follows project conventions. Add complexity when it solves a concrete problem. |
 | Investigation | For unexpected results within scope, compare expected and observed behavior, narrow the discrepancy, test a specific hypothesis, and verify the original symptom. Match the effort to the failure. |
@@ -39,6 +39,14 @@ Keep the project purpose, known commands, workflow preferences, repository conve
 Merge with existing instructions. Keep the file useful even if the anything skills are later unavailable: summarize the chosen behavior rather than relying on a list of skill names.
 
 Do not persist today's agent count, installed tool list, authentication state, absolute machine paths, or temporary permission decisions as permanent project facts. Re-evaluate capabilities in each session.
+
+## Durable task records
+
+For work likely to span sessions or context compaction, or for assignments that need tracking, keep one Markdown record per overall task when writing is in scope and available. Reuse the project's existing record or location when applicable. The default for a new record is `tasks/<task>.md` under the project root, created as needed. When files cannot be written, keep a checkpoint in the conversation and identify it as unsaved.
+
+Capture the outcome, decisions, work items with assignees and dependencies, and the next action. The coordinating agent records references needed to find delegated work and records results with evidence as items complete. On resumption, reopen the record and check it against current instructions, artifacts, and worker state before continuing. In handoffs, share the saved path when the recipient can open it or include the checkpoint text.
+
+Task records follow existing Git rules. During explicit setup, a project can record its preferred location and whether records should stay local or be shared. An already ignored location can hold local records. Changes to ignore rules and inclusion in commits follow the usual authorization for those actions.
 
 ## Composition
 
