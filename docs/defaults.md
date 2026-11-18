@@ -48,6 +48,10 @@ Capture the outcome, decisions, work items with assignees and dependencies, and 
 
 Task records follow existing Git rules. During explicit setup, a project can record its preferred location and whether records should stay local or be shared. An already ignored location can hold local records. Changes to ignore rules and inclusion in commits follow the usual authorization for those actions.
 
+## Worktree isolation
+
+Use linked Git worktrees when parallel workers benefit from separate checkouts. An ignored `.worktrees/` at the root of a stable coordinating checkout is a useful default when the project's tools handle nested checkouts. Use an allowed sibling location for workers when the coordinator may itself be removed. Explicit setup can record a project's preferred root, ignore scope, and cleanup expectations. Preserve results before removing task-owned worktrees. [Worktree setup and cleanup](../skills/orchestrate/references/parallel-work.md#git-worktrees)
+
 ## Composition
 
 Use another skill when it is installed and helps. Otherwise apply the current skill directly. Resolve supporting files relative to the directory containing that skill's `SKILL.md`.
