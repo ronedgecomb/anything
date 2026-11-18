@@ -48,6 +48,10 @@ Capture the outcome, decisions, work items with assignees and dependencies, and 
 
 Task records follow existing Git rules. During explicit setup, a project can record its preferred location and whether records should stay local or be shared. An already ignored location can hold local records. Changes to ignore rules and inclusion in commits follow the usual authorization for those actions.
 
+## Manual handoffs
+
+Explicitly invoke `handoff` to prepare a brief for another agent. It can draw from an existing task record, the current checkout, or notes you supply. Review mode specifies the target, focus, and evidence. Implement mode gives the recipient a starting point, constraints, and acceptance criteria. The default output is Markdown in the conversation for you to transfer. [Handoff skill](../skills/handoff/SKILL.md)
+
 ## Worktree isolation
 
 Use linked Git worktrees when parallel workers benefit from separate checkouts. An ignored `.worktrees/` at the root of a stable coordinating checkout is a useful default when the project's tools handle nested checkouts. Use an allowed sibling location for workers when the coordinator may itself be removed. Explicit setup can record a project's preferred root, ignore scope, and cleanup expectations. Preserve results before removing task-owned worktrees. [Worktree setup and cleanup](../skills/orchestrate/references/parallel-work.md#git-worktrees)

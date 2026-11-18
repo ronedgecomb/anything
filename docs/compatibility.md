@@ -8,19 +8,21 @@ The following invocation behavior is documented by the hosts. It is not a claim 
 
 [Using anything](../skills/using-anything/SKILL.md) is available for relevant selection or explicit invocation when installed. Follow the current host's discovery and loading mechanisms; installing the guide does not guarantee that it is loaded at session startup. A focused task can use another skill directly.
 
-The guide's map describes the collection, including skills that may be absent from an individual installation. Check the available catalog and invocation controls before selecting a skill, and read its actual instructions before relying on them. Load only needed references. Setup and cleanup retain their explicit invocation requirements; mentioning them in the map does not start their work.
+The guide's map describes the collection, including skills that may be absent from an individual installation. Check the available catalog and invocation controls before selecting a skill, and read its actual instructions before relying on them. Load only needed references. Apply manual-only skills when the user explicitly requests their work.
 
-## Manual setup and cleanup
+## Manual-only skills
+
+`setup`, `cleanup`, and `handoff` require explicit invocation.
 
 | Host | Selection control |
 | --- | --- |
 | Codex | Each skill's `agents/openai.yaml` sets `policy.allow_implicit_invocation: false`. |
-| Claude Code | Both skills' `disable-model-invocation: true` frontmatter disables automatic invocation. |
-| Pi | The same frontmatter hides both skills from automatic model selection; explicit skill invocation remains available. |
-| OpenCode 2 | The same frontmatter omits both skills from the model's available list; explicit `@setup` or `@cleanup` loading remains available. |
+| Claude Code | The `disable-model-invocation: true` frontmatter disables automatic invocation. |
+| Pi | The same frontmatter hides manual-only skills from automatic model selection. Explicit invocation remains available. |
+| OpenCode 2 | The same frontmatter omits manual-only skills from the model's available list. Load them explicitly with `@setup`, `@cleanup`, or `@handoff`. |
 | Older or other hosts | Verify their invocation controls. Each skill's body also requires an explicit user request before starting its work. |
 
-OpenCode 1 ignores unknown frontmatter and does not provide the same automatic-selection control. For strict manual-only use on such a host, leave setup and cleanup out of discovered skill directories when installing the other skills. Keep a checkout elsewhere and explicitly supply the relevant `skills/<name>/SKILL.md` only when requesting that skill.
+OpenCode 1 ignores unknown frontmatter and does not provide the same automatic-selection control. For strict manual-only use on such a host, keep manual-only skills outside discovered skill directories. Explicitly supply the relevant `skills/<name>/SKILL.md` when requesting that skill.
 
 Invocation controls govern skill selection. They are not an execution sandbox, and project preferences never override the host's permissions.
 
@@ -76,7 +78,9 @@ The [optional evaluation catalog](../evals/README.md) provides replayable select
 | A task changes stage while using the guide | Reassess the useful skills while preserving settled decisions, current scope, and existing authorization. |
 | The guide lists a skill that is unavailable | Continue directly when available guidance suffices; report a material gap and clarify when explicitly requested instructions are essential. Do not invent invocation or install skills as a side effect. |
 | Only using-anything is installed | Use its self-contained selection guidance without requiring sibling skills or root repository documents. |
-| The guide is read during an ordinary task or findings-only review | Preserve the task's mode and scope; listing setup and cleanup does not invoke them or authorize a sweep or instruction edits. |
+| The guide is read during an ordinary task or findings-only review | Preserve the task's mode and scope. Apply setup, cleanup, or handoff only when the user explicitly requests its work. |
+| A manual review or implementation handoff is requested | Return a self-contained brief for the user to transfer. Identify the exact target or starting point and what the recipient can access. Save the brief only on request. |
+| A review handoff covers local changes in another checkout | Identify an accessible baseline and supply the scoped inputs, including any new files the recipient needs. Identify missing inputs and request a read-only review by default. |
 | The guide is installed in a host | Use the host's discovery mechanisms; do not claim guaranteed session-start loading. Other skills remain directly usable. |
 | A small text or presentation change | A focused edit with applicable existing checks or direct inspection; add automated coverage when behavior or project requirements justify it. |
 | A one-line behavior fix with a regression gap | A clear, complete fix and a focused regression test when needed; patch size alone does not determine verification. |

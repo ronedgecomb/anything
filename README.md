@@ -34,6 +34,7 @@ The skills are instructions loaded when relevant or explicitly invoked; installi
 | [using-anything](skills/using-anything/SKILL.md) | Choose which skills to read and combine, with guidance on their boundaries and when each helps. |
 | [setup](skills/setup/SKILL.md) | Explicitly initialize or update project preferences in `AGENTS.md`. Manual invocation only. |
 | [cleanup](skills/cleanup/SKILL.md) | Explicitly sweep a repository for maintainability improvements, fix clear issues, and discuss larger changes. Manual invocation only. |
+| [handoff](skills/handoff/SKILL.md) | Prepare a review or implementation brief to pass to another agent. Manual invocation only. |
 | [interview](skills/interview/SKILL.md) | Clarify a topic, goal, decision, or set of requirements through an adaptive conversation. |
 | [orchestrate](skills/orchestrate/SKILL.md) | Coordinate work at the right scale, with optional delegation. |
 | [task-plan](skills/task-plan/SKILL.md) | Record goals, work items, decisions, and checkpoints for work that needs a durable handoff. |
@@ -60,6 +61,10 @@ Project preferences persist; tool availability and permissions are checked in th
 Explicitly invoke `cleanup` for a full or targeted repository sweep covering duplication, complexity, structure, tests, documentation, and evidenced performance costs. It fixes clear issues that preserve behavior and discusses larger changes. Request findings only when you want an audit without edits.
 
 The sweep can use subagents when useful, available, and permitted, or work directly. See [repository cleanup](docs/cleanup.md) for scope, examples, and how it composes with the other skills.
+
+## Handoff
+
+Explicitly invoke `handoff` and choose `review` or `implement`. For example, ask for a review handoff for the current changes against `main`, or an implementation handoff for an agreed plan. Copy the Markdown brief into the receiving agent's session, or ask to save it as a file. [Manual invocation](docs/compatibility.md#manual-only-skills)
 
 ## Installation
 
