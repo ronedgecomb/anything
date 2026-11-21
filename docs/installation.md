@@ -2,6 +2,14 @@
 
 Install from [ronedgecomb/anything](https://github.com/ronedgecomb/anything) using a native package or select individual skills. Installation configures your chosen agent; skills do not run these commands automatically.
 
+## Antigravity plugin
+
+```sh
+agy plugin install https://github.com/ronedgecomb/anything
+```
+
+The Antigravity CLI, app, and IDE share this global installation. Run `agy plugin list` to confirm that `anything` is enabled. [Antigravity plugin documentation](https://antigravity.google/docs/plugins)
+
 ## Claude Code plugin
 
 In Claude Code:
@@ -59,6 +67,12 @@ Clone the repository and run the relevant commands from its root:
 ```sh
 git clone https://github.com/ronedgecomb/anything.git
 cd anything
+```
+
+For Antigravity, install the current directory as a plugin.
+
+```sh
+agy plugin install .
 ```
 
 For a Claude Code development session:

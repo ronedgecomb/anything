@@ -68,6 +68,12 @@ Explicitly invoke `handoff` and choose `review` or `implement`. For example, ask
 
 ## Installation
 
+### Antigravity CLI
+
+```sh
+agy plugin install https://github.com/ronedgecomb/anything
+```
+
 ### Claude Code
 
 ```text
