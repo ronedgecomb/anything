@@ -1,7 +1,7 @@
 interface:
   display_name: "No Tombstones"
   short_description: "Keep code, tests, and documentation focused on current needs"
-  default_prompt: "Use $no-tombstones to keep this change focused on current requirements and remove unnecessary implementation history."
+  default_prompt: "Use $no-tombstones to keep this change focused on current requirements without unnecessary implementation history, task narration, or redundant comments."
 
 policy:
   allow_implicit_invocation: true

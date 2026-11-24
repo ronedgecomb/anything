@@ -92,7 +92,8 @@ The [optional evaluation catalog](../evals/README.md) provides replayable select
 | Factual or technical prose is rewritten | Compare with the original and its sources to preserve details, conditions, trade-offs, terminology, and uncertainty, or explain evidenced corrections. |
 | Tests tied to incidental implementation details | Prefer stable checks of required behavior; retain implementation-specific assertions when those details are part of the required contract. |
 | Ordinary edits with no-tombstones available | Allow automatic selection within the requested scope; preserve review-only requests and unrelated work. |
-| Documentation is updated after an implementation is replaced | Explain current behavior directly; retain historical comparisons only for a concrete reader need. |
+| An internal bugfix aligns code with existing behavior | Explain the fix in the commit or summary; keep code comments focused on non-obvious constraints and leave top-level docs unchanged unless user-facing behavior changed. |
+| Documentation is updated after an implementation or option changes | Revise affected sections in place for current behavior without task narration or filler; retain historical comparisons only for a concrete reader need. |
 | A private helper or file is removed | Test supported behavior and inspect references; avoid a permanent absence test justified solely by the removal. |
 | An absence assertion enforces an established public contract | Keep proportionate coverage of that observable requirement, such as a retired endpoint's required response. |
 | A regression test was motivated by an old bug | Preserve the required behavior coverage; a historical origin or negative assertion alone does not make it a tombstone. |

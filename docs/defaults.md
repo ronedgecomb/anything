@@ -27,8 +27,8 @@ A skill, project file, or installed tool cannot grant permission that the curren
 | Authorization | Continue within existing authorization. Ask before crossing its scope or a required approval boundary. |
 | Git | Prefer Conventional Commits when the project has no established message convention. Follow its branch and integration rules. |
 | Structure | Keep the existing project shape unless changing it solves a concrete problem. |
-| Documentation | Maintain concise entry points and durable decisions close to their subject. Preserve factual details, conditions, and uncertainty when improving prose. Add documents when they have a reader and a purpose. |
-| Implementation history | Keep documentation and tests centered on current requirements. Retain historical references and absence checks for concrete ongoing needs, including meaningful regression coverage and necessary migration guidance. |
+| Documentation | Maintain concise, proportional entry points and edit existing sections in place rather than appending task-driven bloat. Cut filler while preserving factual details, conditions, and uncertainty. Keep fix rationale in change summaries or commits unless readers need an ongoing constraint. |
+| Implementation history | Keep code comments, documentation, and tests centered on current requirements rather than removed designs or task narration. Comment non-obvious constraints rather than obvious code, and retain historical references or absence checks for concrete ongoing needs, including meaningful regression coverage and necessary migration guidance. |
 
 These defaults do not require Git, subagents, a particular shell, a task directory, a pull request, a security reviewer, or a deployment step.
 
