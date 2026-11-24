@@ -56,6 +56,12 @@
         "spec.md": "# Marigold retry queue requirements\n\n- Configuration path: config/retry.yaml.\n- Delay between attempts: 750 ms.\n- Maximum: four attempts total, including the original attempt.\n- Manual command: marigold retry --job <id> --region eu-west-1.\n- Automatic retry: HTTP 429 and 503 responses only.\n- Authentication failures require a credential update before manual retry.\n- Regional event timestamps use UTC.\n- Per-tenant cap reference: [queue limits](https://example.invalid/queue-limits). This is a synthetic documentation link; do not browse it.\n- Delivery is at least once; duplicates are possible.\n- The usual drain time of twenty minutes is a planning estimate, not a service guarantee.\n",
         "draft.md": "# Marigold retry queue\n\nThe Marigold retry queue is a queue that gives operators a way to retry deliveries after they have failed. There are a number of details about its operation that operators should know when using it. The configuration for the queue can be found in the file at config/retry.yaml. In normal operation, there is a delay of 750 ms between attempts. The queue performs no more than four attempts in total, and that total includes the original attempt as well as retries.\n\nIf an operator wants to perform a retry manually, the command to use is `marigold retry --job <id> --region eu-west-1`. The automatic retry behavior applies only to HTTP 429 and 503 responses. For authentication failures, operators need to update the credentials before performing a manual retry. Regional event timestamps are shown using UTC.\n\nFor more information on the cap that applies to each tenant, operators should consult [queue limits](https://example.invalid/queue-limits). Delivery uses at least once semantics, which means it is possible for a delivery to be duplicated. The queue usually drains within twenty minutes. That twenty-minute duration is a planning estimate rather than a service guarantee, so operators should not describe it as a guaranteed deadline.\n"
       }
+    },
+    "header-bugfix": {
+      "files": {
+        "README.md": "# Header parser\n\n`parseHeader(line, options)` parses a single `Name: Value` header line and returns `{ name, value }`, or `null` for blank input.\n\n## Options\n\n- `maxBytes`: maximum accepted line length in bytes (default `4096`).\n",
+        "parser.js": "export const DEFAULT_MAX_BYTES = 4096;\n\nexport function parseHeader(line, options = {}) {\n  const maxBytes = options.maxBytes ?? DEFAULT_MAX_BYTES;\n  if (Buffer.byteLength(line, 'utf8') > maxBytes) {\n    throw new RangeError('Header exceeds maxBytes');\n  }\n  const index = line.indexOf(':');\n  if (index <= 0) {\n    throw new Error('Invalid header');\n  }\n  return {\n    name: line.slice(0, index).trim(),\n    value: line.slice(index + 1).trim()\n  };\n}\n"
+      }
     }
   },
   "cases": [
@@ -480,6 +486,40 @@
             "id": "checked-focused-edit",
             "expectation": "Only draft.md changes, it has fewer words than the original, and the executor compares the result with the source before reporting completion. No separate plan, review record, or automated test is required.",
             "evidence": "File comparison, source-read or comparison observations, and response."
+          }
+        ]
+      }
+    },
+    {
+      "id": "application-focused-bugfix-docs",
+      "track": "application",
+      "runner": {
+        "fixture": "header-bugfix",
+        "catalog": "repo-style and no-tombstones only",
+        "load_skills": [
+          "skills/repo-style/SKILL.md",
+          "skills/no-tombstones/SKILL.md"
+        ],
+        "constraints": [
+          "Edit only parser.js and README.md as needed. Do not create new files or run external commands."
+        ]
+      },
+      "task": {
+        "messages": [
+          "Fix parseHeader in parser.js so blank input returns null as documented, change the default maxBytes limit to 8192, and update any documentation or comments that need updating. Report the changes and what you checked."
+        ]
+      },
+      "grader": {
+        "checks": [
+          {
+            "id": "focused-code-and-comments",
+            "expectation": "parser.js returns null for blank input (including empty or whitespace-only strings) and sets DEFAULT_MAX_BYTES to 8192. It omits comments that merely paraphrase obvious code, narrate the bugfix, or announce that 4096 was replaced.",
+            "evidence": "Before/after parser.js and final response."
+          },
+          {
+            "id": "proportionate-in-place-docs",
+            "expectation": "README.md updates the default maxBytes value from 4096 to 8192 in place without appending a paragraph about the blank-input bugfix, announcing that 4096 is no longer used, or expanding existing sections with filler. The fix rationale appears in the completion summary instead.",
+            "evidence": "Before/after README.md and final response."
           }
         ]
       }

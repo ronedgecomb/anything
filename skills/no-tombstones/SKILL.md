@@ -1,21 +1,21 @@
 ---
 name: no-tombstones
 license: Apache-2.0
-description: Keep code, tests, comments, and documentation focused on current requirements. Use during ordinary creation, modification, review, and cleanup to prevent unnecessary residue of previous implementations. Retain historical references and absence checks when they protect a concrete ongoing need.
+description: Keep code, tests, comments, and documentation focused on current requirements. Use during ordinary creation, modification, review, and cleanup to prevent unnecessary residue of previous implementations, task narration, and redundant comments. Retain historical references and absence checks when they protect a concrete ongoing need.
 ---
 
 # No tombstones
 
-Document current behavior and test current requirements. A tombstone is material left behind or newly added mainly to describe or forbid a previous implementation, without serving a concrete ongoing purpose.
+Document current behavior and test current requirements. A tombstone is material left behind or newly added mainly to describe or forbid a previous implementation, without serving a concrete ongoing purpose. The same applies to task narration—comments or prose added mainly to recount the current edit or fix rather than an ongoing reader need.
 
 Apply this guidance during ordinary work within the requested scope. Respect review-only requests and preserve unrelated work. Existing tombstones can be addressed during an authorized review or cleanup; finding one does not expand the task.
 
 ## Documentation and comments
 
-- Explain the current architecture, supported usage, and constraints directly. Replace affected stale explanations with accurate ones.
-- Omit sentences whose only purpose is announcing that an old approach was removed, such as "This no longer uses the old parser." Keep a historical comparison when the reader needs it to act or understand a current constraint.
-- Keep comments that explain non-obvious behavior, reasons, and trade-offs. Remove affected comments that merely mark where deleted functionality used to be.
-- Use the appropriate existing place for needed migration guidance or decision history. Change summaries and requested historical accounts can describe transitions. Do not create a history document just to preserve removed material.
+- Explain current behavior, supported usage, and constraints directly as timeless state. Revise or replace affected explanations in place instead of appending change-focused paragraphs or caveats.
+- Omit prose that merely announces what changed or was removed, such as "This no longer uses the old parser" or "Inputs are now validated to prevent crashes." Keep a historical comparison only when the reader needs it to act or understand a current constraint.
+- Write code comments to explain non-obvious invariants, constraints, external quirks, or trade-offs that the code cannot express on its own. Omit comments that paraphrase what the code already says, restate obvious control flow, narrate the current fix (such as `// Fix crash when header is empty`), or mark where deleted functionality used to be.
+- Put fix rationale, transition context, and task narrative in commit messages, change summaries, or an existing place for migration guidance or decision history. Do not create a history document just to preserve removed material.
 
 ## Tests and verification
 
@@ -42,12 +42,13 @@ Examples:
 | --- | --- |
 | A storage implementation is replaced | Document current setup and usage; remove the affected stale instructions. |
 | A private helper is deleted | Exercise the supported behavior and inspect remaining references during the change. |
-| A bug is fixed | Keep a regression test for the required behavior. |
+| A bug is fixed | Keep a regression test for the required behavior; explain the fix in the commit or summary rather than adding fix-narrating comments or a README paragraph. |
+| Code relies on a non-obvious external quirk | Add a concise comment explaining the constraint; omit comments that only paraphrase the code. |
 | A retired endpoint is required to return `410 Gone` | Test that response through the public interface. |
 | Users must migrate a supported older configuration | Keep the instructions needed for that migration in an appropriate existing location. |
 
 ## Check the result
 
-For each affected explanation, comment, or assertion, identify the current requirement or reader need it serves. Someone unfamiliar with the previous implementation should be able to understand why ordinary documentation and tests exist.
+For each affected explanation, comment, or assertion, identify the current requirement or reader need it serves. Someone unfamiliar with the previous implementation or the task that produced the change should be able to understand why ordinary documentation, comments, and tests exist.
 
 Remove or rewrite material with no ongoing purpose, preserving useful coverage and required guidance. Verify the affected behavior, links, and references as appropriate. Report actual changes and checks in the task's normal completion summary; a separate report is optional.

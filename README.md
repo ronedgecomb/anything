@@ -17,7 +17,7 @@ Start with the skills you need. Setup is optional: useful defaults are included 
 - Match the amount of planning, questioning, verification, and documentation to the task.
 - Keep a resumable record for substantial work that spans sessions or needs assignment tracking. Use the project's chosen location or `tasks/<task>.md`. See [durable task records](docs/defaults.md#durable-task-records).
 - Prefer the smallest clear, complete change. Add complexity when it has a concrete benefit, and tests when they provide meaningful confidence.
-- Document current behavior and test current requirements. Retain implementation history when it serves a concrete ongoing need.
+- Document current behavior and test current requirements. Keep prose and comments focused on ongoing reader needs rather than task narration or filler, and retain implementation history when it serves a concrete ongoing need.
 - Follow the user's request and existing project conventions. Use anything's defaults for choices they leave open.
 - Delegate only when it is useful, available, and permitted. Work directly when it is not.
 - Keep decisions and findings grounded in evidence. Distinguish independent review from self-review.
