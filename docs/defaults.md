@@ -26,15 +26,15 @@ A skill, project file, or installed tool cannot grant permission that the curren
 | Follow-ups | Report the issue, evidence or location, and next step. Ask before adding it to an existing tracker or `TODO.md` unless already authorized; otherwise use the conversation without creating a tracker. |
 | Authorization | Continue within existing authorization. Ask before crossing its scope or a required approval boundary. |
 | Git | Prefer Conventional Commits when the project has no established message convention. Follow its branch and integration rules. |
-| Structure | Keep the existing project shape unless changing it solves a concrete problem. |
-| Documentation | Maintain concise, proportional entry points and edit existing sections in place rather than appending task-driven bloat. Cut filler while preserving factual details, conditions, and uncertainty. Keep fix rationale in change summaries or commits unless readers need an ongoing constraint. |
+| Structure | Keep the existing project shape unless changing it solves a concrete problem. Keep source files, test suites, and shared helpers cohesive as they grow rather than appending indefinitely to catch-all files. |
+| Documentation | Maintain concise, proportional entry points and edit existing sections in place rather than appending task-driven bloat. Cut filler while preserving factual details, conditions, and uncertainty. Prefer referencing live commands or authoritative sources over duplicating volatile counts, and keep fix rationale in change summaries or commits unless readers need an ongoing constraint. |
 | Implementation history | Keep code comments, documentation, and tests centered on current requirements rather than removed designs or task narration. Comment non-obvious constraints rather than obvious code, and retain historical references or absence checks for concrete ongoing needs, including meaningful regression coverage and necessary migration guidance. |
 
 These defaults do not require Git, subagents, a particular shell, a task directory, a pull request, a security reviewer, or a deployment step.
 
 ## What setup records
 
-Keep the project purpose, known commands, workflow preferences, repository conventions, review expectations, and relevant boundaries in the project's root `AGENTS.md`. Include only applicable, settled choices.
+Keep the project purpose, known commands, workflow preferences, repository conventions, review expectations, and relevant boundaries in the project's root `AGENTS.md`. Include only applicable, settled choices. As a project matures, keep `AGENTS.md` concise by linking to focused guides in `docs/` rather than duplicating detailed style or testing rules inline.
 
 Merge with existing instructions. Keep the file useful even if the anything skills are later unavailable: summarize the chosen behavior rather than relying on a list of skill names.
 
@@ -50,7 +50,7 @@ Task records follow existing Git rules. During explicit setup, a project can rec
 
 ## Manual handoffs
 
-Explicitly invoke `handoff` to prepare a brief for another agent. It can draw from an existing task record, the current checkout, or notes you supply. Review mode specifies the target, focus, and evidence. Implement mode gives the recipient a starting point, constraints, and acceptance criteria. The default output is Markdown in the conversation for you to transfer. [Handoff skill](../skills/handoff/SKILL.md)
+Explicitly invoke `handoff` to prepare a brief for another agent. It can draw from an existing task record, the current checkout, or notes you supply. Review mode specifies the target, focus, and evidence. Implement mode gives the recipient a starting point, constraints, and acceptance criteria. The default output is Markdown in the conversation for you to transfer; when saved to a file, report the path with a short starter prompt pointing the recipient to it (unless file-only output was requested). [Handoff skill](../skills/handoff/SKILL.md)
 
 ## Worktree isolation
 

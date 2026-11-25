@@ -14,7 +14,7 @@ Look for:
 - Concrete correctness failures and regressions in the affected behavior.
 - Missing or misleading verification of a claimed result.
 - Data, concurrency, compatibility, and security issues relevant to this change.
-- Inconsistent interfaces, duplicated rules, or complexity with a practical cost.
+- Inconsistent interfaces, duplicated rules, complexity with a practical cost, or growing catch-all source and test files that mix distinct responsibilities.
 - Tests that duplicate coverage without useful confidence or depend on incidental implementation details, making harmless changes fail.
 - Documentation, comments, or tests that merely memorialize a removed implementation, narrate the fix, paraphrase obvious code, or bloat documentation disproportionately to the change. Preserve references, comments, and absence checks with a concrete ongoing purpose, including non-obvious constraints, required migration guidance, and meaningful regression coverage.
 - Requirements that the artifact misses, and assumptions that need evidence.

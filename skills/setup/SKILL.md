@@ -44,6 +44,7 @@ Start from [assets/agents-template.md](assets/agents-template.md), keeping only 
 
 - Create the root `AGENTS.md` when absent and local instruction edits are authorized.
 - Preserve existing instructions, comments, and unrelated content. Reuse existing sections where sensible.
+- Keep root `AGENTS.md` concise as a project matures: once structure, style, or testing rules grow beyond a few bullets, link to focused guides under `docs/` instead of accumulating a long inline policy.
 - If an anything-managed block exists, update only that block. Otherwise add a small `<!-- anything:start -->` / `<!-- anything:end -->` block for missing preferences. Do not duplicate or contradict existing policy.
 - If markers are malformed or repeated, preserve the file and clarify the intended edit instead of guessing a replacement range.
 - Resolve material conflicts with the user; keep settled instructions while a choice remains open.

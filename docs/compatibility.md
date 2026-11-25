@@ -79,7 +79,7 @@ The [optional evaluation catalog](../evals/README.md) provides replayable select
 | The guide lists a skill that is unavailable | Continue directly when available guidance suffices; report a material gap and clarify when explicitly requested instructions are essential. Do not invent invocation or install skills as a side effect. |
 | Only using-anything is installed | Use its self-contained selection guidance without requiring sibling skills or root repository documents. |
 | The guide is read during an ordinary task or findings-only review | Preserve the task's mode and scope. Apply setup, cleanup, or handoff only when the user explicitly requests its work. |
-| A manual review or implementation handoff is requested | Return a self-contained brief for the user to transfer. Identify the exact target or starting point and what the recipient can access. Save the brief only on request. |
+| A manual review or implementation handoff is requested | Return a self-contained brief for the user to transfer. Identify the exact target or starting point and what the recipient can access. Save the brief only on request; when saved, report the path and include a short starter prompt unless file-only output was requested. |
 | A review handoff covers local changes in another checkout | Identify an accessible baseline and supply the scoped inputs, including any new files the recipient needs. Identify missing inputs and request a read-only review by default. |
 | The guide is installed in a host | Use the host's discovery mechanisms; do not claim guaranteed session-start loading. Other skills remain directly usable. |
 | A small text or presentation change | A focused edit with applicable existing checks or direct inspection; add automated coverage when behavior or project requirements justify it. |
@@ -94,6 +94,8 @@ The [optional evaluation catalog](../evals/README.md) provides replayable select
 | Ordinary edits with no-tombstones available | Allow automatic selection within the requested scope; preserve review-only requests and unrelated work. |
 | An internal bugfix aligns code with existing behavior | Explain the fix in the commit or summary; keep code comments focused on non-obvious constraints and leave top-level docs unchanged unless user-facing behavior changed. |
 | Documentation is updated after an implementation or option changes | Revise affected sections in place for current behavior without task narration or filler; retain historical comparisons only for a concrete reader need. |
+| A command or source artifact reports live counts or metrics | Reference the command or authoritative source instead of duplicating volatile numbers across prose docs. |
+| A change pushes a source or test file into mixed responsibilities | Split along natural domain boundaries as the area grows rather than appending indefinitely to a catch-all file, without fragmenting tightly coupled logic. |
 | A private helper or file is removed | Test supported behavior and inspect references; avoid a permanent absence test justified solely by the removal. |
 | An absence assertion enforces an established public contract | Keep proportionate coverage of that observable requirement, such as a retired endpoint's required response. |
 | A regression test was motivated by an old bug | Preserve the required behavior coverage; a historical origin or negative assertion alone does not make it a tombstone. |

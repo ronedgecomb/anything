@@ -15,7 +15,7 @@ Own the requested outcome, integration, evidence, and conversation with the user
 3. Choose the smallest useful plan. Keep short tasks in the conversation and save a task record when continuity or coordination warrants it.
 4. Select the stages this task needs: investigation, research, drafting or implementation, documentation, review, verification, and delivery. Skip stages that add no value. A task need not involve code, Git, or publication.
 
-Prefer the smallest clear, complete change that satisfies the request and follows project conventions. Favor readability and maintainability over minimizing line count. Reuse existing patterns; introduce abstractions, dependencies, configuration, or broader refactoring when they solve a concrete problem in the requested work.
+Prefer the smallest clear, complete change that satisfies the request and follows project conventions. Favor readability and maintainability over minimizing line count. Reuse existing patterns; introduce abstractions, dependencies, configuration, or broader refactoring when they solve a concrete problem in the requested work. Keep source files, test suites, and shared helpers cohesive as they grow — when a change introduces a distinct responsibility, split along natural domain boundaries rather than appending indefinitely to a catch-all file.
 
 Continue work needed to deliver or verify the requested outcome within existing authorization. Defer unrelated defects, cleanup, and improvements unless the user approves expanding the task. Do not pursue further investigation, implementation, or delegation of that work without approval; discovery alone does not authorize it. If an issue blocks the requested outcome and resolving it exceeds authorization, explain the dependency and ask.
 
