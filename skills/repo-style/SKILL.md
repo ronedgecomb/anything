@@ -20,6 +20,7 @@ Preserve established names and structure when they work. Do not introduce a new 
 - Use the root README as a concise entry point when the project needs one: purpose, how to use the work, and where to go next.
 - Group implementation, source material, tests, assets, and generated results according to the project's language or domain. Do not impose `src/`, `tests/`, or any other directory on every project.
 - Add `docs/` or topic directories when the material needs them. Keep a small project small.
+- Keep source files, test suites, and shared helpers cohesive as they grow. When a change causes a file to mix distinct responsibilities or leaves a flat directory crowded, split along natural domain boundaries rather than appending indefinitely to a catch-all file, without fragmenting tightly coupled logic into trivial wrappers.
 - Keep transient output distinct from durable source where useful, following the project's tracking and retention policy.
 - Maintain one authoritative explanation of each rule or decision. Link from other places instead of copying it.
 
@@ -35,6 +36,7 @@ Write for the intended reader's ongoing need, not the author's recent task. Lead
 - Document current behavior, supported usage, and consequential trade-offs. Include internal mechanics only when they help the reader act.
 - Put task narrative and fix rationale in commit messages, change summaries, or decision records rather than durable prose, unless the reader needs an ongoing constraint or migration step.
 - When user-facing behavior changes, revise or replace affected wording in place so existing sections stay cohesive and proportionate. Avoid bolting on new paragraphs, callouts, or defensive caveats for narrow fixes, and leave top-level docs unchanged when an internal fix only preserves already-documented behavior.
+- Prefer referencing the command, manifest, or authoritative source over duplicating volatile counts, inventories, or machine-specific metrics in prose. Keep a snapshot only when a dated, single-source baseline genuinely helps the reader.
 - Verify commands, paths, and factual claims against accessible source material. Label unverified examples and placeholders.
 - Create a plan, decision record, changelog entry, or guide when requested or useful to its readers. Do not generate a set of ceremonial documents for every task.
 
@@ -45,6 +47,7 @@ Before keeping an added sentence or section, check what the reader would get wro
 | An internal bugfix aligns code with existing behavior | Explain the fix in the commit message or summary; leave the README unchanged. |
 | A change alters a supported option or default | Update the affected line or section in place instead of appending a "now/no longer" paragraph. |
 | A narrow edge case matters only to operators or maintainers | Put it in linked reference docs or a concise comment where it applies, not the root README. |
+| A command or source artifact reports live counts or metrics | Show the command or link the source instead of hand-maintaining volatile numbers in prose. |
 | Revising an over-explained section | Remove filler and repetition while keeping real constraints, numbers, commands, and caveats intact. |
 
 When revising factual or technical prose, identify the details that must survive: names, numbers and units, commands, paths, links, conditions, trade-offs, established terminology, and uncertainty. Compare the edited text with the original and its sources. Preserve those details or explain factual corrections supported by evidence; clearer wording must preserve the claim's scope and necessary qualifiers. Match the depth of this check to the risk of changing the meaning; a separate inventory or report is optional.

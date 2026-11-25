@@ -31,4 +31,4 @@ The receiving agent follows its own applicable project instructions and permissi
 
 ## Deliver it
 
-Return a copyable Markdown brief in the conversation. Save a file when requested, using the user's path or a distinct filename in a suitable project location. Preserve unrelated contents and report the path if saved. If writing is unavailable, return the brief as text and say it is unsaved. Honor an explicit request for file-only output when you can save it.
+Return a copyable Markdown brief in the conversation. Save a file when requested, using the user's path or a distinct filename in a suitable project location. Preserve unrelated contents, report the path if saved, and include a short copyable starter prompt pointing the receiving agent to that file (unless the user asked for file-only output). If writing is unavailable, return the brief as text and say it is unsaved.
