@@ -12,7 +12,7 @@
 - Prefer the smallest clear, complete change that meets the request and follows project conventions. Add complexity when it has a concrete benefit.
 - Delegate only when useful, available, and permitted. Otherwise work directly. Recheck capabilities each session.
 - Prefer a separate context for review when useful; label self-review honestly when no separate context is available.
-- Continue within authorization already given. Clarify new scope and respect required approval boundaries.
+- Run non-destructive local checks (read-only during review-only tasks) and, when Git is used during authorized edits, commit focused local checkpoints—especially before review rounds—unless restricted by project policy or protected branches. Ask before impactful actions such as pushing, opening pull requests, merging, rewriting shared history, deleting resources or branches, or running destructive or live non-local commands. Continue within authorization already given.
 - Defer unrelated findings; ask before investigating, fixing, or delegating them. Report the issue, evidence or location, and next step. Ask before recording it in an existing tracker or `TODO.md` unless already authorized; otherwise report it in the conversation without creating a tracker.
 
 ## Project conventions

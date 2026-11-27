@@ -34,7 +34,7 @@ Consider the applicable choices:
 - For projects that use worktrees, their preferred location, the scope of any ignore rule, and cleanup expectations.
 - Actions the user wants to retain control over, within the environment's permission limits.
 
-Use lightweight defaults where no preference is stated: proportionate planning and checks, consequential questions, useful and permitted delegation with direct execution as a fallback, concise documentation, and Conventional Commits when Git has no other convention. Existing authorization applies within its scope; new or unclear scope needs clarification.
+Use lightweight defaults where no preference is stated: proportionate planning, local non-destructive verification commands, consequential questions, useful and permitted delegation with direct execution as a fallback, and concise documentation. When Git is used during authorized edits, commit focused local checkpoints (especially before review rounds) using Conventional Commits when no other convention applies. Ask before impactful actions such as pushing, opening pull requests, merging, rewriting shared history, deleting resources or branches, or running destructive or live non-local commands; existing authorization applies within its scope.
 
 Follow existing Git rules for task records and worktree locations. When the project prefers local records, check whether the chosen location already fits that policy. For worktrees inside a checkout, check that the root is ignored and free of tracked paths. Change an ignore rule only when the user has authorized that edit.
 

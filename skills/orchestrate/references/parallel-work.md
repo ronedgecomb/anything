@@ -13,7 +13,7 @@ Use parallelism only for independent work when the environment supports it and p
 
 Use the isolation the environment actually provides: separate drafts, artifact copies, native isolated workspaces, or Git worktrees when Git is present and appropriate.
 
-- Avoid concurrent writers to the same artifact or mutable resource. Distinct files may still share a Git index, generated output, test state, or database.
+- Avoid concurrent writers to the same artifact or mutable resource. Distinct files may still share a Git index, generated output, test state, or database. When parallel workers share one Git checkout instead of separate worktrees, leave checkpoint commits to the integration owner or sequence commits rather than committing concurrently into a shared index.
 - If the environment cannot support safe concurrent writes, sequence edits. Read-only investigation may still run independently.
 - A Git worktree is an option, not a prerequisite. Follow the project's branch and integration strategy; do not require merge commits.
 - New workspaces may lack dependencies or local configuration. Inspect their needs rather than assuming a main workspace's untracked or ignored files are present.
@@ -48,7 +48,7 @@ git -C .worktrees/report-filters status --short --branch
 
 A new checkout starts from the selected commit. Supply permitted local inputs separately and check dependencies and configuration before running checks. If creation fails, inspect the worktree and branch state before retrying.
 
-Give the worker its accessible path, starting commit, branch when present, and ownership boundaries. Have it confirm the checkout before editing and run project commands there. Record the path, starting commit, and any branch in the task record when one exists. Agree how results will return, such as a commit when authorized or a patch or file set that includes any needed new files.
+Give the worker its accessible path, starting commit, branch when present, and ownership boundaries. Have it confirm the checkout before editing and run project commands there. Record the path, starting commit, and any branch in the task record when one exists. Agree how results will return, such as local commits on the worker branch when allowed, or a patch or file set that includes any needed new files.
 
 ### Integrate and remove
 

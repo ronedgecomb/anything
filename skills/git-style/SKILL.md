@@ -1,7 +1,7 @@
 ---
 name: git-style
 license: Apache-2.0
-description: Prepare focused Git changes and clear commit messages, using Conventional Commits when the project has no other convention. Use when organizing a change, preparing a commit, or discussing Git workflow. Follow project branch and integration rules, and perform commits or remote actions only within the user's authorization.
+description: Prepare focused Git changes and clear commit messages, using Conventional Commits when the project has no other convention. Use when organizing a change, committing checkpoints, preparing a commit message, or discussing Git workflow. Follow project branch and integration rules; commit focused local checkpoints during authorized edits by default, and confirm remote, shared, or destructive Git actions.
 ---
 
 # Git style
@@ -19,12 +19,13 @@ Choose branch and integration behavior from the task and project. This skill doe
 ## Prepare focused changes
 
 - Keep each commit coherent enough to understand and review on its own.
-- Stage only intended changes, using explicit paths or selected hunks as needed. Do not scoop up unrelated changes.
+- During authorized editing work, commit in focused local checkpoints or coherent chunks as you go—especially before review rounds or riskier edits so the state is easy to inspect and roll back.
+- Inspect existing staged changes and stage only intended in-scope edits, using explicit paths or selected hunks as needed. Do not scoop up unrelated staged or unstaged work.
 - Include necessary tests and documentation with the behavior they explain.
-- Verify the affected result using the project's applicable checks. Report meaningful limits and unrelated failures.
+- Verify the affected result using the project's applicable non-destructive local checks. Report meaningful limits and unrelated failures.
 - Do not fabricate an author, signature, issue reference, or attribution trailer. Use configured identity and required project metadata.
 
-Preparing a change or message does not itself mean the user asked you to commit it.
+Do not commit when editing was not authorized—for example, when asked only to draft a message, organize or review existing changes, discuss workflow, or perform a read-only review.
 
 ## Write the message
 
@@ -55,7 +56,7 @@ docs: explain local installation
 
 ## Execute and report
 
-Commit, push, publish, merge, rewrite history, or delete branches only when authorized for that effect. Reuse authorization within its scope; clarify a material change rather than re-asking about the same action. An approval-gate skill can help if installed, but is not required.
+During authorized editing work, local checkpoint commits of your in-scope edits are allowed and encouraged by default when Git is in use and no user instruction, project policy, protected-branch rule, read-only request, or environment restriction prohibits them. Push, open or update pull requests, merge, publish, rewrite shared history, delete branches, or discard work only when authorized for that effect. Reuse authorization within its scope; clarify a material change rather than re-asking about the same action. An approval-gate skill can help if installed, but is not required.
 
 Respect protected branches and project integration policy. Avoid rewriting or discarding unrelated work. Cleanup needs its own applicable authorization and ownership check.
 
