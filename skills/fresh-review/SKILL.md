@@ -10,7 +10,7 @@ Judge the artifact against the requested outcome and available evidence. Follow 
 
 ## Establish the target
 
-Identify the artifact, intent, applicable constraints, and the questions that matter. Use a stable copy, version, or snapshot when possible. If work changes during review, state what version was reviewed and revisit affected findings.
+Identify the artifact, intent, applicable constraints, and the questions that matter. Use a stable copy, version, or snapshot when possible; before reviewing your own authorized edits in a Git repository, making a focused local checkpoint commit provides a clean snapshot and rollback point unless user, project, or protected-branch rules restrict commits (never commit during a read-only or findings-only review request). If work changes during review, state what version was reviewed and revisit affected findings.
 
 For code, inspect the relevant change and surrounding behavior using the available comparison tools. For writing, research, or plans, check the argument, evidence, audience, omissions, and internal consistency.
 
@@ -29,7 +29,7 @@ The bundled [code-review brief](references/code-review-brief.md) and [security-r
 
 ## Gather findings
 
-Keep the reviewed artifacts unchanged during review. Run checks only when permitted and their effects are understood; avoid conflicting use of shared resources.
+Keep the reviewed artifacts unchanged during review. Local read-only verification commands (such as tests, linters, or typechecks that do not modify files or affect live systems) are fine by default when permitted and their effects are understood; avoid write-effect checks, live non-local commands, or conflicting use of shared resources.
 
 Each finding should include:
 

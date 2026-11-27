@@ -49,4 +49,4 @@ These validate packaging, not end-to-end agent behavior. Do not claim runtime te
 
 Use Conventional Commits for normal development, with focused commits and configured author identity. The initial public snapshot intentionally uses `Initial commit`.
 
-Preserve unrelated work. Commit, publish, or rewrite history within the user's authorized scope, respecting applicable restrictions. Do not add a repeated approval step to an action already authorized.
+Preserve unrelated work. Local checkpoint commits (including before review rounds) and local verification checks are fine by default during authorized work; ask before pushing, opening or updating pull requests, merging, publishing, rewriting shared history, or running live non-local commands unless already authorized. Do not add a repeated approval step to an action already authorized.

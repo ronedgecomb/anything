@@ -17,7 +17,7 @@ Qualify the request in ordinary language; these are examples rather than require
 - "Use cleanup on the API and tests, focusing on duplicated validation and module boundaries."
 - "Use cleanup for a first pass focused on configuration and documentation. Use subagents if available and permitted."
 
-Findings-only requests keep repository files unchanged. A normal cleanup request already authorizes clear local fixes within its scope; it does not require approval of every finding. Architectural changes, intended behavior changes, public contracts, dependency upgrades, instruction-policy changes, and external actions follow the user's actual authorization.
+Findings-only requests keep repository files unchanged. A normal cleanup request already authorizes clear local fixes within its scope, along with local non-destructive checks and focused local checkpoint commits when Git is in use and project rules allow them; it does not require approval of every finding. Architectural changes, intended behavior changes, public contracts, dependency upgrades, instruction-policy changes, live non-local commands, and remote or destructive Git or external actions follow the user's actual authorization.
 
 The skill preserves unrelated work and checks whether apparently unused material has dynamic, exported, configured, or packaged consumers before removing it. Performance findings need measurements or a demonstrable cost; suspected bottlenecks remain labeled hypotheses.
 
@@ -36,13 +36,13 @@ Every helper is optional; cleanup includes enough guidance and its own bundled s
 | no-tombstones | Keep explanations, comments, and tests focused on current requirements without historical residue, task narration, or obvious comments; preserve references with an ongoing purpose. |
 | fresh-review | Review the integrated result in a separate context when possible; otherwise label self-review. |
 | approval-gate | Resolve a new authorization boundary using the concrete proposed action. |
-| git-style | Prepare coherent Git changes when Git operations are requested. |
+| git-style | Organize focused local checkpoint commits and follow project Git conventions. |
 | setup | Separately record durable workflow preferences when explicitly requested; cleanup does not invoke it. |
 
 ## Result and completion
 
 Expect a concise account of coverage, completed improvements and their reasons, remaining findings with evidence and next steps, and checks actually performed. Verification and review limitations stay explicit. A clean area can have no actionable findings.
 
-The sweep ends when its bounded coverage and authorized changes are complete and applicable checks are satisfied. It can report deferred decisions without repeatedly searching for more work or creating a new tracking system. Report files, branches, commits, and publication are conditional on the task and project conventions.
+The sweep ends when its bounded coverage and authorized changes are complete and applicable checks are satisfied. It can report deferred decisions without repeatedly searching for more work or creating a new tracking system. Report files, branches, pushing, pull requests, and publication are conditional on the task and project conventions.
 
 See [installation](installation.md) for invocation examples and [compatibility](compatibility.md) for manual-selection controls and behavioral checks.

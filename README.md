@@ -21,7 +21,7 @@ Start with the skills you need. Setup is optional: useful defaults are included 
 - Follow the user's request and existing project conventions. Use anything's defaults for choices they leave open.
 - Delegate only when it is useful, available, and permitted. Work directly when it is not.
 - Keep decisions and findings grounded in evidence. Distinguish independent review from self-review.
-- Respect authorization already given within its scope. Ask when an action needs permission that is missing or unclear.
+- Run non-destructive local verification commands and make focused local checkpoint commits during authorized edits (especially before review rounds) unless restricted. Ask before impactful actions—such as pushing, opening pull requests, merging, or running live non-local commands—and continue within authorization already given.
 - Defer unrelated findings. Ask before pursuing them or adding them to an existing tracker unless already authorized; otherwise report them for later.
 - Prefer Conventional Commits when Git is used and the project has no other convention.
 
@@ -40,7 +40,7 @@ The skills are instructions loaded when relevant or explicitly invoked; installi
 | [task-plan](skills/task-plan/SKILL.md) | Record goals, work items, decisions, and checkpoints for work that needs a durable handoff. |
 | [fresh-review](skills/fresh-review/SKILL.md) | Review an artifact using a separate context when possible, or an explicitly labeled self-review. |
 | [approval-gate](skills/approval-gate/SKILL.md) | Resolve authorization for consequential actions without repeating approvals unnecessarily. |
-| [git-style](skills/git-style/SKILL.md) | Prepare focused changes and use Conventional Commits by default. |
+| [git-style](skills/git-style/SKILL.md) | Commit focused local checkpoints and use Conventional Commits by default. |
 | [repo-style](skills/repo-style/SKILL.md) | Keep project structure and documentation clear and proportional. |
 | [no-tombstones](skills/no-tombstones/SKILL.md) | Keep code, tests, comments, and documentation focused on current requirements during ordinary edits, review, and cleanup. |
 

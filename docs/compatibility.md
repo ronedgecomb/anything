@@ -115,6 +115,9 @@ The [optional evaluation catalog](../evals/README.md) provides replayable select
 | An interview without a question tool | Adaptive questions in normal conversation. |
 | Only one skill installed | Complete its task without requiring sibling skills or root repository resources. |
 | A user has already authorized the action | Continue within that scope; ask again only for a material change or another required boundary. |
+| Authorized edits are in progress in a Git repository | Commit focused local checkpoints between coherent chunks and before review rounds unless restricted by the user, project policy, protected branches, or environment. Preserve unrelated work. |
+| Local verification checks are available during a task | Run non-destructive local tests, linters, typechecks, and local builds by default within environment permissions; avoid write-effect checks during read-only or findings-only requests. |
+| An unrequested impactful action is considered | Ask for confirmation with the concrete target and effect before pushing, opening or updating pull requests, merging, publishing, deleting resources, rewriting shared history, or running live commands against real or non-local systems. |
 | Skill content or plugin behavior changes for a release | Bump the version consistently across all three manifests; related changes in one release share a bump. |
 | A new skill is missing after an installed Claude plugin is updated | Check the installed components, manifest version, project scope, and enabled state. Refresh the marketplace, update the plugin, and reload or restart the session; do not assume the checkout and installed cache match. |
 | Setup with existing instructions | Preserve unrelated content, resolve conflicts, and update only settled preferences. |

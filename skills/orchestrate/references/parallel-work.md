@@ -48,7 +48,7 @@ git -C .worktrees/report-filters status --short --branch
 
 A new checkout starts from the selected commit. Supply permitted local inputs separately and check dependencies and configuration before running checks. If creation fails, inspect the worktree and branch state before retrying.
 
-Give the worker its accessible path, starting commit, branch when present, and ownership boundaries. Have it confirm the checkout before editing and run project commands there. Record the path, starting commit, and any branch in the task record when one exists. Agree how results will return, such as a commit when authorized or a patch or file set that includes any needed new files.
+Give the worker its accessible path, starting commit, branch when present, and ownership boundaries. Have it confirm the checkout before editing and run project commands there. Record the path, starting commit, and any branch in the task record when one exists. Agree how results will return, such as local commits on the worker branch when allowed, or a patch or file set that includes any needed new files.
 
 ### Integrate and remove
 
