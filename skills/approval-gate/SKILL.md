@@ -21,10 +21,11 @@ Identify the target, effect, relevant account or environment, cost, and reversib
 - Discovering an unrelated issue does not authorize investigating, fixing, or delegating it. Ask before expanding the task, or defer it with a brief finding and next step. Ask before recording it in an existing tracker or `TODO.md` unless that recording is already authorized; otherwise report it in the conversation without creating a tracker.
 - Do not use a different tool, worker, or subprocess to bypass a restriction.
 
-By default, routine local verification and checkpointing within an authorized task do not require separate confirmation unless restricted by the user, project policy, protected branches, a read-only request, or the environment:
+By default, routine local verification and checkpointing within an authorized task do not require separate confirmation:
 
-- **Routine local actions:** running non-destructive local checks (such as tests, linters, typechecks, and local builds whose effects are understood) and making focused local checkpoint commits of in-scope edits—especially between coherent chunks and before review rounds—while keeping unrelated work untouched.
-- **Consequential actions requiring authorization:** running live commands against real or non-local systems, pushing branches, opening or updating pull requests, merging, publishing, deploying, sending messages, rewriting shared history, installing tools or unrequested dependencies, and deleting resources, branches, or work. None is automatically included in an unrelated action.
+- **Routine local verification:** running non-destructive local checks (such as tests, linters, typechecks, and local builds whose effects are understood) within environment permissions; keep to checks without write effects during read-only or findings-only requests.
+- **Local checkpoint commits:** making focused local commits of in-scope edits during authorized editing work—especially between coherent chunks and before review rounds—when Git is in use and no user instruction, project policy, protected-branch rule, or environment restriction prohibits them, while leaving unrelated staged or unstaged work untouched.
+- **Consequential actions requiring authorization:** running destructive local commands or live commands against real or non-local systems, pushing branches, opening or updating pull requests, merging, publishing, deploying, sending messages, rewriting shared history, installing tools or unrequested dependencies, and deleting resources, branches, or work. None is automatically included in an unrelated action.
 
 Evaluate consequences rather than location alone. A remote read can be routine; a local script that hits a live service or deletes important work is consequential.
 

@@ -43,10 +43,10 @@ claude plugin validate .claude-plugin/marketplace.json --strict
 
 Expect the plugin validator's warning that root `CLAUDE.md` is not loaded as installed plugin context: it is deliberately for contributors. Check that the report has no errors, and investigate any other manifest or content warnings. Strict mode also rejects that intentional warning.
 
-These validate packaging, not end-to-end agent behavior. Do not claim runtime testing in a host that was not exercised. Keep validation from changing installed plugins as a side effect.
+These validate packaging, not end-to-end agent behavior. Do not claim runtime testing in a host that was not exercised. Keep validation from changing installed plugins as a side effect. Non-destructive local verification commands are fine by default within environment permissions; ask before running destructive or live non-local commands unless already authorized.
 
 ## Git
 
 Use Conventional Commits for normal development, with focused commits and configured author identity. The initial public snapshot intentionally uses `Initial commit`.
 
-Preserve unrelated work. Local checkpoint commits (including before review rounds) and local verification checks are fine by default during authorized work; ask before pushing, opening or updating pull requests, merging, publishing, rewriting shared history, or running live non-local commands unless already authorized. Do not add a repeated approval step to an action already authorized.
+Preserve unrelated staged or unstaged work. Local checkpoint commits of in-scope edits (including before review rounds) are fine by default during authorized edits unless restricted; ask before pushing, opening or updating pull requests, merging, publishing, rewriting shared history, deleting branches, or discarding work unless already authorized. Do not add a repeated approval step to an action already authorized.

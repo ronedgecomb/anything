@@ -13,7 +13,7 @@ Use parallelism only for independent work when the environment supports it and p
 
 Use the isolation the environment actually provides: separate drafts, artifact copies, native isolated workspaces, or Git worktrees when Git is present and appropriate.
 
-- Avoid concurrent writers to the same artifact or mutable resource. Distinct files may still share a Git index, generated output, test state, or database.
+- Avoid concurrent writers to the same artifact or mutable resource. Distinct files may still share a Git index, generated output, test state, or database. When parallel workers share one Git checkout instead of separate worktrees, leave checkpoint commits to the integration owner or sequence commits rather than committing concurrently into a shared index.
 - If the environment cannot support safe concurrent writes, sequence edits. Read-only investigation may still run independently.
 - A Git worktree is an option, not a prerequisite. Follow the project's branch and integration strategy; do not require merge commits.
 - New workspaces may lack dependencies or local configuration. Inspect their needs rather than assuming a main workspace's untracked or ignored files are present.

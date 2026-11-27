@@ -17,7 +17,7 @@ Qualify the request in ordinary language; these are examples rather than require
 - "Use cleanup on the API and tests, focusing on duplicated validation and module boundaries."
 - "Use cleanup for a first pass focused on configuration and documentation. Use subagents if available and permitted."
 
-Findings-only requests keep repository files unchanged. A normal cleanup request already authorizes clear local fixes within its scope, along with local non-destructive checks and focused local checkpoint commits when Git is in use and project rules allow them; it does not require approval of every finding. Architectural changes, intended behavior changes, public contracts, dependency upgrades, instruction-policy changes, live non-local commands, and remote or destructive Git or external actions follow the user's actual authorization.
+Findings-only requests keep repository files unchanged. A normal editing cleanup request already authorizes clear local fixes within its scope, along with local non-destructive checks and focused local checkpoint commits when Git is in use and user, project, protected-branch, and environment rules allow them; it does not require approval of every finding. Architectural changes, intended behavior changes, public contracts, dependency upgrades, instruction-policy changes, destructive or live non-local commands, and remote or destructive Git or external actions follow the user's actual authorization.
 
 The skill preserves unrelated work and checks whether apparently unused material has dynamic, exported, configured, or packaged consumers before removing it. Performance findings need measurements or a demonstrable cost; suspected bottlenecks remain labeled hypotheses.
 
